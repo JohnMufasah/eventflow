@@ -1,0 +1,18 @@
+# Build artifacts
+*.o
+*.obj
+*.exe
+eventflow
+
+# Doxygen output (keep source, not generated HTML, in git - remove this line
+# if your team wants generated docs committed instead of just exported/screenshotted)
+docs/html/
+docs/latex/
+
+# OS/editor junk
+.vscode/
+.vs/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
