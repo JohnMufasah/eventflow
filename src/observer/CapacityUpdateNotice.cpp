@@ -19,3 +19,8 @@ int CapacityUpdateNotice::getNewCapacity() const
 {
     return newCapacity;
 }
+
+std::string CapacityUpdateNotice::getType() const
+{
+    return "Capacity Update";
+}

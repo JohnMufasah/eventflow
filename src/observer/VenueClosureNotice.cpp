@@ -12,3 +12,8 @@ std::string VenueClosureNotice::getVenue() const
 {
     return venue;
 }
+
+std::string VenueClosureNotice::getType() const
+{
+    return "Venue Closure";
+}
