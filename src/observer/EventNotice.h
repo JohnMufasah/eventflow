@@ -8,6 +8,8 @@
 
 #include <string>
 
+class EventComponent;
+
 /**
  * @class EventNotice
  * @brief Abstract base class representing an event notification.
@@ -64,6 +66,18 @@ public:
      * @return A string identifying the concrete notification type.
      */
     virtual std::string getType() const = 0;
+
+    /**
+     * @brief Applies this notice to an EventComponent.
+     *
+     * The concrete notice determines which reaction hook should
+     * be triggered on the receiving component. This supports
+     * double dispatch and allows different EventComponent types
+     * to react differently to the same notification.
+     *
+     * @param component Component receiving the notification.
+     */
+    virtual void affect(EventComponent* component) = 0;
 };
 
 #endif
