@@ -6,19 +6,44 @@
 
 void EventControl::attach(Observer* observer)
 {
-    observers.push_back(observer);
+    if (observer == nullptr)
+    {
+        return;
+    }
+
+    if (std::find(observers.begin(), observers.end(), observer) == observers.end())
+    {
+        observers.push_back(observer);
+    }
 }
 
-void EventControl::detach(Observer* observer) {
+void EventControl::detach(Observer* observer)
+{
+    if (observer == nullptr)
+    {
+        return;
+    }
+
     auto it = std::find(observers.begin(), observers.end(), observer);
 
-    if(it != observers.end()){
+    if (it != observers.end())
+    {
         observers.erase(it);
     }
 }
 
-void EventControl::notify(EventNotice* notice) {
-    for (Observer* observer : observers) {
-        observer->update(notice);
+void EventControl::notify(EventNotice* notice)
+{
+    if (notice == nullptr)
+    {
+        return;
+    }
+
+    for (Observer* observer : observers)
+    {
+        if (observer != nullptr)
+        {
+            observer->update(notice);
+        }
     }
 }
