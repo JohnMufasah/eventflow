@@ -1,0 +1,42 @@
+\doxysection{Capacity\+Update\+Notice.\+cpp}
+\hypertarget{_capacity_update_notice_8cpp_source}{}\label{_capacity_update_notice_8cpp_source}\index{src/observer/CapacityUpdateNotice.cpp@{src/observer/CapacityUpdateNotice.cpp}}
+\mbox{\hyperlink{_capacity_update_notice_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}CapacityUpdateNotice.h"{}}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}../composite/EventComponent.h"{}}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00017}\mbox{\hyperlink{class_capacity_update_notice_a85410674c6834a7a4bdf9cef6ce4b750}{00017}}\ \mbox{\hyperlink{class_capacity_update_notice_a85410674c6834a7a4bdf9cef6ce4b750}{CapacityUpdateNotice::CapacityUpdateNotice}}(\textcolor{keyword}{const}\ std::string\&\ message,}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ location,}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ oldCapacity,}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newCapacity)}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00021}00021\ \ \ \ \ :\ \mbox{\hyperlink{class_event_notice}{EventNotice}}(message,\ location),}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00022}00022\ \ \ \ \ \ \ oldCapacity(oldCapacity),}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00023}00023\ \ \ \ \ \ \ newCapacity(newCapacity)}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00032}\mbox{\hyperlink{class_capacity_update_notice_ab34fbed77b03a95052fd82e227e2f7bc}{00032}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_capacity_update_notice_ab34fbed77b03a95052fd82e227e2f7bc}{CapacityUpdateNotice::getOldCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00033}00033\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ oldCapacity;}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00042}\mbox{\hyperlink{class_capacity_update_notice_a60453fd11b24fe9878ed6f1b076c5d05}{00042}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_capacity_update_notice_a60453fd11b24fe9878ed6f1b076c5d05}{CapacityUpdateNotice::getNewCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00043}00043\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{return}\ newCapacity;}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00052}\mbox{\hyperlink{class_capacity_update_notice_a3a7971cc3323a7ebb47ab3405f6a3113}{00052}}\ std::string\ \mbox{\hyperlink{class_capacity_update_notice_a3a7971cc3323a7ebb47ab3405f6a3113}{CapacityUpdateNotice::getType}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00053}00053\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Capacity\ Update"{}};}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00065}\mbox{\hyperlink{class_capacity_update_notice_abdb58b78187c9342a4f62825a99688f7}{00065}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_capacity_update_notice_abdb58b78187c9342a4f62825a99688f7}{CapacityUpdateNotice::affect}}(\mbox{\hyperlink{class_event_component}{EventComponent}}*\ component)}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (component\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ component-\/>\mbox{\hyperlink{class_event_component_a4f93a9cbdd78da5b800a39868fc4e09c}{onCapacityUpdate}}(newCapacity);}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8cpp_source_l00071}00071\ \}}
+
+\end{DoxyCode}

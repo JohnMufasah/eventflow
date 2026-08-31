@@ -1,0 +1,143 @@
+\doxysection{Open\+Day Class Reference}
+\hypertarget{class_open_day}{}\label{class_open_day}\index{OpenDay@{OpenDay}}
+
+
+Represents the University Open Day.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Group.\+h$>$}
+
+Inheritance diagram for Open\+Day\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_open_day}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_day_aed9382743a297a170dbbb7ade8da203e}{Open\+Day}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_open_day}{Open\+Day}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_group}{Event\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_group_a520ed7b96db42bd580a447dbb6d1470e}{Event\+Group}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructs an event group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_event_group_a31ced71b330f350837e4dda2f461b94d}{\texorpdfstring{$\sim$}{\string~}\+Event\+Group}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the event group. \end{DoxyCompactList}\item 
+{\bfseries Event\+Group} (const \mbox{\hyperlink{class_event_group}{Event\+Group}} \&)=delete
+\item 
+\mbox{\hyperlink{class_event_group}{Event\+Group}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_event_group}{Event\+Group}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_event_group_a4c0f84ecca145a195c118c95507c0701}{add}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em Adds a child component to the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_a76b8259f0d061e1efdd2d4f6f08cb875}{remove}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em Removes a child component from the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_aa12055a0456c9e6faf6de3a12a70b0e1}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_a600460d78e6fc8d0ec13b1767590dcc9}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_abc6919ac70ecf081cdec8c3ffaadc89e}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the current status of the component. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_event_group_affe035069afc221547fe9e848017ee3c}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the capacity associated with the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_a2670fa5b3529fa5be0b6962fb449c4ee}{handle\+Notice}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Handles a notification received by the component. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_event_group_a91487acc6fbfbb8966626047b288e450}{get\+Children}} () const
+\begin{DoxyCompactList}\small\item\em Returns the components contained in the group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_event_component_a4f93a9cbdd78da5b800a39868fc4e09c}{on\+Capacity\+Update}} (int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Updates the component\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_aec4839494e41e077a0cea87a1d1c9c47}{on\+Venue\+Closure}} ()
+\begin{DoxyCompactList}\small\item\em Handles a venue closure notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a8649a7d0f5703e55b00f2acbef1dfa81}{on\+Room\+Change}} (const std\+::string \&new\+Room)
+\begin{DoxyCompactList}\small\item\em Handles a room change notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a72044b70a5e083f682335152500cda70}{on\+Safety\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a415af28892c73148fc8f424354811c8a}{on\+Weather\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a weather alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_abdf4090503098b9451ac2fd1bfd5d8bd}{on\+Congestion}} ()
+\begin{DoxyCompactList}\small\item\em Handles an exhibition congestion notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a2fabd68692363f9338fdf6f53a8d4e64}{on\+Shuttle\+Overload}} ()
+\begin{DoxyCompactList}\small\item\em Handles a shuttle overload notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_ad02b6a3271d3612e51bb6bb4a0015049}{on\+Emergency\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles an emergency alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_ac7af43a3cfad36b92bf77d4c7f957002}{on\+Capacity\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a capacity alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a7718f210ff03ddaf04618459e58ec143}{on\+Allergen\+Alert}} (const std\+::string \&dietary\+Tag)
+\begin{DoxyCompactList}\small\item\em Handles an allergen or dietary alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a89faa0da6eda79417910a81c1228da66}{on\+Department\+Mismatch}} (const std\+::string \&correct\+Faculty)
+\begin{DoxyCompactList}\small\item\em Handles a department mismatch notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a63967a66a104928431b085397137cd80}{on\+Safety\+Briefing\+Reminder}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety briefing reminder. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_event_component_a0b229e18d9611b8109c0a5527e6b01df}{\texorpdfstring{$\sim$}{\string~}\+Event\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_day_ae637ad08789c3fd8a4507b88c3398de2}{get\+Type\+Label}} () const override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event_group}{Event\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_group_a5a562b9df3327ce5c12b7d808f58c5ad}{name}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_event_group_aa500e3a46ac77b3efe5ae886e9791489}{children}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the University Open Day. 
+
+Definition at line \mbox{\hyperlink{_event_group_8h_source_l00080}{80}} of file \mbox{\hyperlink{_event_group_8h_source}{Event\+Group.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_open_day_aed9382743a297a170dbbb7ade8da203e}\label{class_open_day_aed9382743a297a170dbbb7ade8da203e} 
+\index{OpenDay@{OpenDay}!OpenDay@{OpenDay}}
+\index{OpenDay@{OpenDay}!OpenDay@{OpenDay}}
+\doxysubsubsection{\texorpdfstring{OpenDay()}{OpenDay()}}
+{\footnotesize\ttfamily Open\+Day\+::\+Open\+Day (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs an \doxylink{class_open_day}{Open\+Day}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the open day. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00138}{138}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_open_day_ae637ad08789c3fd8a4507b88c3398de2}\label{class_open_day_ae637ad08789c3fd8a4507b88c3398de2} 
+\index{OpenDay@{OpenDay}!getTypeLabel@{getTypeLabel}}
+\index{getTypeLabel@{getTypeLabel}!OpenDay@{OpenDay}}
+\doxysubsubsection{\texorpdfstring{getTypeLabel()}{getTypeLabel()}}
+{\footnotesize\ttfamily std\+::string Open\+Day\+::get\+Type\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_group}{Event\+Group}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/composite/Event\+Group.\+h\item 
+src/composite/\mbox{\hyperlink{_event_group_8cpp}{Event\+Group.\+cpp}}\end{DoxyCompactItemize}

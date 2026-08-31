@@ -1,0 +1,35 @@
+\doxysection{Capacity\+Alert.\+cpp}
+\hypertarget{_capacity_alert_8cpp_source}{}\label{_capacity_alert_8cpp_source}\index{src/observer/CapacityAlert.cpp@{src/observer/CapacityAlert.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}CapacityAlert.h"{}}}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../composite/EventComponent.h"{}}}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00004}\mbox{\hyperlink{class_capacity_alert_ade4987a0bb56b630eb9da0ea8fe97b36}{00004}}\ \mbox{\hyperlink{class_capacity_alert_ade4987a0bb56b630eb9da0ea8fe97b36}{CapacityAlert::CapacityAlert}}(}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ message,}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ location,}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{keywordtype}{bool}\ laboratoryZone)}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00008}00008\ \ \ \ \ :\ \mbox{\hyperlink{class_event_notice}{EventNotice}}(message,\ location),}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00009}00009\ \ \ \ \ \ \ laboratoryZone(laboratoryZone)}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00011}00011\ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00013}\mbox{\hyperlink{class_capacity_alert_aa8e152bd2288d83a2282e40218c0a096}{00013}}\ std::string\ \mbox{\hyperlink{class_capacity_alert_aa8e152bd2288d83a2282e40218c0a096}{CapacityAlert::getType}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00014}00014\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Capacity\ Alert"{}};}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00018}\mbox{\hyperlink{class_capacity_alert_a885f3e991e26cb65659d9c02a8b5c742}{00018}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_capacity_alert_a885f3e991e26cb65659d9c02a8b5c742}{CapacityAlert::affect}}(\mbox{\hyperlink{class_event_component}{EventComponent}}*\ component)}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{if}\ (component\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00021}00021\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ component-\/>\mbox{\hyperlink{class_event_component_ac7af43a3cfad36b92bf77d4c7f957002}{onCapacityAlert}}();}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00026}\mbox{\hyperlink{class_capacity_alert_ac326a7bdd7ccbbf74d804ceb62a2b160}{00026}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_capacity_alert_ac326a7bdd7ccbbf74d804ceb62a2b160}{CapacityAlert::isLaboratoryZone}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00027}00027\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ laboratoryZone;}
+\DoxyCodeLine{\Hypertarget{_capacity_alert_8cpp_source_l00029}00029\ \}}
+
+\end{DoxyCode}

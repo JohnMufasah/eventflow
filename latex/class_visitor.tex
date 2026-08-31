@@ -1,0 +1,96 @@
+\doxysection{Visitor Class Reference}
+\hypertarget{class_visitor}{}\label{class_visitor}\index{Visitor@{Visitor}}
+
+
+Represents a visitor attending the University Open Day.  
+
+
+
+
+{\ttfamily \#include $<$Visitor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visitor_a8af4e2ab5e855820c38ce9007d7f45ee}{Visitor}} (const std\+::string \&name, const std\+::string \&faculty)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_visitor}{Visitor}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_visitor_a3c0c93b2099bc5ac077b7b0cb1df99c6}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the visitor\textquotesingle{}s name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_visitor_a4b7eec3d117f973e8d3c0f67024ea408}{get\+Faculty}} () const
+\begin{DoxyCompactList}\small\item\em Gets the visitor\textquotesingle{}s faculty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a visitor attending the University Open Day. 
+
+A \doxylink{class_visitor}{Visitor} has an identity and a faculty or department that can be used to determine whether the visitor is in the correct faculty. 
+
+Definition at line \mbox{\hyperlink{_visitor_8h_source_l00018}{18}} of file \mbox{\hyperlink{_visitor_8h_source}{Visitor.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_visitor_a8af4e2ab5e855820c38ce9007d7f45ee}\label{class_visitor_a8af4e2ab5e855820c38ce9007d7f45ee} 
+\index{Visitor@{Visitor}!Visitor@{Visitor}}
+\index{Visitor@{Visitor}!Visitor@{Visitor}}
+\doxysubsubsection{\texorpdfstring{Visitor()}{Visitor()}}
+{\footnotesize\ttfamily Visitor\+::\+Visitor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{faculty }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_visitor}{Visitor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_visitor}{Visitor}\textquotesingle{}s name. \\
+\hline
+{\em faculty} & \doxylink{class_faculty}{Faculty} the visitor is interested in. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_visitor_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_visitor_8cpp_source}{Visitor.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_visitor_a4b7eec3d117f973e8d3c0f67024ea408}\label{class_visitor_a4b7eec3d117f973e8d3c0f67024ea408} 
+\index{Visitor@{Visitor}!getFaculty@{getFaculty}}
+\index{getFaculty@{getFaculty}!Visitor@{Visitor}}
+\doxysubsubsection{\texorpdfstring{getFaculty()}{getFaculty()}}
+{\footnotesize\ttfamily std\+::string Visitor\+::get\+Faculty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the visitor\textquotesingle{}s faculty. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_faculty}{Faculty} associated with the visitor. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_visitor_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_visitor_8cpp_source}{Visitor.\+cpp}}.
+
+\Hypertarget{class_visitor_a3c0c93b2099bc5ac077b7b0cb1df99c6}\label{class_visitor_a3c0c93b2099bc5ac077b7b0cb1df99c6} 
+\index{Visitor@{Visitor}!getName@{getName}}
+\index{getName@{getName}!Visitor@{Visitor}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Visitor\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the visitor\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_visitor}{Visitor}\textquotesingle{}s name. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_visitor_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_visitor_8cpp_source}{Visitor.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/event/\mbox{\hyperlink{_visitor_8h}{Visitor.\+h}}\item 
+src/event/\mbox{\hyperlink{_visitor_8cpp}{Visitor.\+cpp}}\end{DoxyCompactItemize}

@@ -1,60 +1,45 @@
-/**
- * @file VenueClosureNotice.h
- * @brief Defines notifications for venue closures.
- */
-
 #ifndef VENUECLOSURENOTICE_H
 #define VENUECLOSURENOTICE_H
 
 #include "EventNotice.h"
 
 /**
- * @class VenueClosureNotice
- * @brief Represents a notification that a venue has been closed.
- *
- * VenueClosureNotice extends EventNotice with the specific venue
- * affected by the closure.
+ * @brief Notice indicating that a venue has been closed.
  */
 class VenueClosureNotice : public EventNotice
 {
 private:
-
-    /// Name of the venue that has been closed.
     std::string venue;
 
 public:
-
     /**
-     * @brief Constructs a venue closure notification.
+     * @brief Creates a venue closure notice.
      *
      * @param message Description of the closure.
      * @param location Location associated with the closure.
-     * @param venue Name of the venue that has been closed.
+     * @param venue Name of the closed venue.
      */
-    VenueClosureNotice(const std::string& message,
-                       const std::string& location,
-                       const std::string& venue);
+    VenueClosureNotice(
+        const std::string& message,
+        const std::string& location,
+        const std::string& venue);
 
     /**
-     * @brief Gets the closed venue.
-     *
-     * @return Name of the venue affected by the closure.
+     * @brief Returns the closed venue.
      */
     std::string getVenue() const;
 
     /**
-     * @brief Returns the notification type.
-     *
-     * @return "Venue Closure".
+     * @brief Returns the notice type.
      */
     std::string getType() const override;
 
     /**
- * @brief Applies the venue closure notification to an EventComponent.
- *
- * @param component Component receiving the notification.
- */
-void affect(EventComponent* component) override;
+     * @brief Applies the venue closure.
+     *
+     * @param component Component receiving the notice.
+     */
+    void affect(EventComponent* component) override;
 };
 
 #endif

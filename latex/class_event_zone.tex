@@ -1,0 +1,402 @@
+\doxysection{Event\+Zone Class Reference}
+\hypertarget{class_event_zone}{}\label{class_event_zone}\index{EventZone@{EventZone}}
+
+
+Represents a zone within the event.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Group.\+h$>$}
+
+Inheritance diagram for Event\+Zone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_event_zone}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_zone_abe8216e366d978cdda2224361fcaef46}{Event\+Zone}} (const std\+::string \&name, int capacity\+Limit, bool laboratory\+Zone=false)
+\begin{DoxyCompactList}\small\item\em Constructs an event zone. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_event_zone_afaba55087ded329f355cbd24be9635dc}{admit\+Visitor}} (const \mbox{\hyperlink{class_visitor}{Visitor}} \&visitor)
+\begin{DoxyCompactList}\small\item\em Attempts to admit a visitor into the zone. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_event_zone_a41eba2b71e9dda6c9b028c6b346ea4d6}{get\+Visitor\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current number of visitors. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_event_zone_a4341a33f799d9fbac291c4a266a3a00f}{get\+Capacity\+Limit}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum visitor capacity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_event_zone_acf27680878f8562ccbb56fd9819aeb7f}{is\+Laboratory\+Zone}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether this is a laboratory zone. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_event_zone_a1d0210c84935bd2bccb0d75967e822a6}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the capacity associated with the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_zone_a267d912366630e390acd46221db14a9e}{on\+Capacity\+Alert}} () override
+\begin{DoxyCompactList}\small\item\em Handles a capacity alert. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_zone_aea5c72855b07ab3683cd161f8fbd0f5b}{attach}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em Registers an observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_zone_a037794e948dceda5c5c98c6c389abe96}{detach}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em Removes an observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_zone_a5ddbe110df8a0bf74e5d94e6b40a9da3}{notify}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Sends a notification to attached observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_group}{Event\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_group_a520ed7b96db42bd580a447dbb6d1470e}{Event\+Group}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructs an event group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_event_group_a31ced71b330f350837e4dda2f461b94d}{\texorpdfstring{$\sim$}{\string~}\+Event\+Group}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the event group. \end{DoxyCompactList}\item 
+{\bfseries Event\+Group} (const \mbox{\hyperlink{class_event_group}{Event\+Group}} \&)=delete
+\item 
+\mbox{\hyperlink{class_event_group}{Event\+Group}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_event_group}{Event\+Group}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_event_group_a4c0f84ecca145a195c118c95507c0701}{add}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em Adds a child component to the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_a76b8259f0d061e1efdd2d4f6f08cb875}{remove}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em Removes a child component from the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_aa12055a0456c9e6faf6de3a12a70b0e1}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_a600460d78e6fc8d0ec13b1767590dcc9}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_abc6919ac70ecf081cdec8c3ffaadc89e}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the current status of the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_group_a2670fa5b3529fa5be0b6962fb449c4ee}{handle\+Notice}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Handles a notification received by the component. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_event_group_a91487acc6fbfbb8966626047b288e450}{get\+Children}} () const
+\begin{DoxyCompactList}\small\item\em Returns the components contained in the group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_event_component_a4f93a9cbdd78da5b800a39868fc4e09c}{on\+Capacity\+Update}} (int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Updates the component\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_aec4839494e41e077a0cea87a1d1c9c47}{on\+Venue\+Closure}} ()
+\begin{DoxyCompactList}\small\item\em Handles a venue closure notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a8649a7d0f5703e55b00f2acbef1dfa81}{on\+Room\+Change}} (const std\+::string \&new\+Room)
+\begin{DoxyCompactList}\small\item\em Handles a room change notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a72044b70a5e083f682335152500cda70}{on\+Safety\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a415af28892c73148fc8f424354811c8a}{on\+Weather\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a weather alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_abdf4090503098b9451ac2fd1bfd5d8bd}{on\+Congestion}} ()
+\begin{DoxyCompactList}\small\item\em Handles an exhibition congestion notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a2fabd68692363f9338fdf6f53a8d4e64}{on\+Shuttle\+Overload}} ()
+\begin{DoxyCompactList}\small\item\em Handles a shuttle overload notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_ad02b6a3271d3612e51bb6bb4a0015049}{on\+Emergency\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles an emergency alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a7718f210ff03ddaf04618459e58ec143}{on\+Allergen\+Alert}} (const std\+::string \&dietary\+Tag)
+\begin{DoxyCompactList}\small\item\em Handles an allergen or dietary alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a89faa0da6eda79417910a81c1228da66}{on\+Department\+Mismatch}} (const std\+::string \&correct\+Faculty)
+\begin{DoxyCompactList}\small\item\em Handles a department mismatch notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a63967a66a104928431b085397137cd80}{on\+Safety\+Briefing\+Reminder}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety briefing reminder. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_event_component_a0b229e18d9611b8109c0a5527e6b01df}{\texorpdfstring{$\sim$}{\string~}\+Event\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_zone_a8dde0ddbfdb735b0340110558de0acc2}{get\+Type\+Label}} () const override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_event_zone_aae3a0fcd3ea8777de065633e247783e6}{visitor\+Count}}
+\item 
+int \mbox{\hyperlink{class_event_zone_a7c022c63751aefc5ce0c9b62afc0ae45}{capacity\+Limit}}
+\item 
+bool \mbox{\hyperlink{class_event_zone_a28d6ea40940644085d5cc89b326da618}{laboratory\+Zone}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_event_zone_a88071ac046f2d5df11cef8f44b53e788}{observers}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event_group}{Event\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_group_a5a562b9df3327ce5c12b7d808f58c5ad}{name}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_event_group_aa500e3a46ac77b3efe5ae886e9791489}{children}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a zone within the event. 
+
+\doxylink{class_event_zone}{Event\+Zone} acts as a \doxylink{class_subject}{Subject} in the \doxylink{class_observer}{Observer} pattern, allowing observers such as \doxylink{class_student_guide}{Student\+Guide} to be attached and moved between zones at runtime. 
+
+Definition at line \mbox{\hyperlink{_event_group_8h_source_l00120}{120}} of file \mbox{\hyperlink{_event_group_8h_source}{Event\+Group.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_zone_abe8216e366d978cdda2224361fcaef46}\label{class_event_zone_abe8216e366d978cdda2224361fcaef46} 
+\index{EventZone@{EventZone}!EventZone@{EventZone}}
+\index{EventZone@{EventZone}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{EventZone()}{EventZone()}}
+{\footnotesize\ttfamily Event\+Zone\+::\+Event\+Zone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{capacity\+Limit,  }\item[{bool}]{laboratory\+Zone = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs an event zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the zone. \\
+\hline
+{\em capacity\+Limit} & Maximum number of visitors. \\
+\hline
+{\em laboratory\+Zone} & Whether the zone is a laboratory. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00158}{158}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_zone_afaba55087ded329f355cbd24be9635dc}\label{class_event_zone_afaba55087ded329f355cbd24be9635dc} 
+\index{EventZone@{EventZone}!admitVisitor@{admitVisitor}}
+\index{admitVisitor@{admitVisitor}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{admitVisitor()}{admitVisitor()}}
+{\footnotesize\ttfamily bool Event\+Zone\+::admit\+Visitor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visitor}{Visitor}} \&}]{visitor }\end{DoxyParamCaption})}
+
+
+
+Attempts to admit a visitor into the zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & \doxylink{class_visitor}{Visitor} attempting to enter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the visitor was admitted, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00169}{169}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_aea5c72855b07ab3683cd161f8fbd0f5b}\label{class_event_zone_aea5c72855b07ab3683cd161f8fbd0f5b} 
+\index{EventZone@{EventZone}!attach@{attach}}
+\index{attach@{attach}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Event\+Zone\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Registers an observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & \doxylink{class_observer}{Observer} to attach. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_subject_ab6d78de2ea944a23dc5a66a4fe580db2}{Subject}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00244}{244}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_a037794e948dceda5c5c98c6c389abe96}\label{class_event_zone_a037794e948dceda5c5c98c6c389abe96} 
+\index{EventZone@{EventZone}!detach@{detach}}
+\index{detach@{detach}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Event\+Zone\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes an observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & \doxylink{class_observer}{Observer} to detach. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_subject_a7e81018a886792735ab3d067feeb075d}{Subject}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00260}{260}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_a1d0210c84935bd2bccb0d75967e822a6}\label{class_event_zone_a1d0210c84935bd2bccb0d75967e822a6} 
+\index{EventZone@{EventZone}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Event\+Zone\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the capacity associated with the component. 
+
+\begin{DoxyReturn}{Returns}
+Component capacity. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_event_group_affe035069afc221547fe9e848017ee3c}{Event\+Group}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00220}{220}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_a4341a33f799d9fbac291c4a266a3a00f}\label{class_event_zone_a4341a33f799d9fbac291c4a266a3a00f} 
+\index{EventZone@{EventZone}!getCapacityLimit@{getCapacityLimit}}
+\index{getCapacityLimit@{getCapacityLimit}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{getCapacityLimit()}{getCapacityLimit()}}
+{\footnotesize\ttfamily int Event\+Zone\+::get\+Capacity\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the maximum visitor capacity. 
+
+\begin{DoxyReturn}{Returns}
+Maximum capacity. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00210}{210}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_a8dde0ddbfdb735b0340110558de0acc2}\label{class_event_zone_a8dde0ddbfdb735b0340110558de0acc2} 
+\index{EventZone@{EventZone}!getTypeLabel@{getTypeLabel}}
+\index{getTypeLabel@{getTypeLabel}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{getTypeLabel()}{getTypeLabel()}}
+{\footnotesize\ttfamily std\+::string Event\+Zone\+::get\+Type\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_group}{Event\+Group}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00291}{291}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_a41eba2b71e9dda6c9b028c6b346ea4d6}\label{class_event_zone_a41eba2b71e9dda6c9b028c6b346ea4d6} 
+\index{EventZone@{EventZone}!getVisitorCount@{getVisitorCount}}
+\index{getVisitorCount@{getVisitorCount}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{getVisitorCount()}{getVisitorCount()}}
+{\footnotesize\ttfamily int Event\+Zone\+::get\+Visitor\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current number of visitors. 
+
+\begin{DoxyReturn}{Returns}
+Current visitor count. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00205}{205}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_acf27680878f8562ccbb56fd9819aeb7f}\label{class_event_zone_acf27680878f8562ccbb56fd9819aeb7f} 
+\index{EventZone@{EventZone}!isLaboratoryZone@{isLaboratoryZone}}
+\index{isLaboratoryZone@{isLaboratoryZone}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{isLaboratoryZone()}{isLaboratoryZone()}}
+{\footnotesize\ttfamily bool Event\+Zone\+::is\+Laboratory\+Zone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks whether this is a laboratory zone. 
+
+\begin{DoxyReturn}{Returns}
+true if the zone is a laboratory, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00215}{215}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_a5ddbe110df8a0bf74e5d94e6b40a9da3}\label{class_event_zone_a5ddbe110df8a0bf74e5d94e6b40a9da3} 
+\index{EventZone@{EventZone}!notify@{notify}}
+\index{notify@{notify}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Event\+Zone\+::notify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sends a notification to attached observers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_subject_aeb9b41d7a80e5179d83f44169ffaea51}{Subject}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00273}{273}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+\Hypertarget{class_event_zone_a267d912366630e390acd46221db14a9e}\label{class_event_zone_a267d912366630e390acd46221db14a9e} 
+\index{EventZone@{EventZone}!onCapacityAlert@{onCapacityAlert}}
+\index{onCapacityAlert@{onCapacityAlert}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{onCapacityAlert()}{onCapacityAlert()}}
+{\footnotesize\ttfamily void Event\+Zone\+::on\+Capacity\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a capacity alert. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_ac7af43a3cfad36b92bf77d4c7f957002}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8cpp_source_l00225}{225}} of file \mbox{\hyperlink{_event_group_8cpp_source}{Event\+Group.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_event_zone_a7c022c63751aefc5ce0c9b62afc0ae45}\label{class_event_zone_a7c022c63751aefc5ce0c9b62afc0ae45} 
+\index{EventZone@{EventZone}!capacityLimit@{capacityLimit}}
+\index{capacityLimit@{capacityLimit}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{capacityLimit}{capacityLimit}}
+{\footnotesize\ttfamily int Event\+Zone\+::capacity\+Limit\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8h_source_l00125}{125}} of file \mbox{\hyperlink{_event_group_8h_source}{Event\+Group.\+h}}.
+
+\Hypertarget{class_event_zone_a28d6ea40940644085d5cc89b326da618}\label{class_event_zone_a28d6ea40940644085d5cc89b326da618} 
+\index{EventZone@{EventZone}!laboratoryZone@{laboratoryZone}}
+\index{laboratoryZone@{laboratoryZone}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{laboratoryZone}{laboratoryZone}}
+{\footnotesize\ttfamily bool Event\+Zone\+::laboratory\+Zone\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8h_source_l00126}{126}} of file \mbox{\hyperlink{_event_group_8h_source}{Event\+Group.\+h}}.
+
+\Hypertarget{class_event_zone_a88071ac046f2d5df11cef8f44b53e788}\label{class_event_zone_a88071ac046f2d5df11cef8f44b53e788} 
+\index{EventZone@{EventZone}!observers@{observers}}
+\index{observers@{observers}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{observers}{observers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_observer}{Observer}}\texorpdfstring{$\ast$}{*}$>$ Event\+Zone\+::observers\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8h_source_l00128}{128}} of file \mbox{\hyperlink{_event_group_8h_source}{Event\+Group.\+h}}.
+
+\Hypertarget{class_event_zone_aae3a0fcd3ea8777de065633e247783e6}\label{class_event_zone_aae3a0fcd3ea8777de065633e247783e6} 
+\index{EventZone@{EventZone}!visitorCount@{visitorCount}}
+\index{visitorCount@{visitorCount}!EventZone@{EventZone}}
+\doxysubsubsection{\texorpdfstring{visitorCount}{visitorCount}}
+{\footnotesize\ttfamily int Event\+Zone\+::visitor\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_event_group_8h_source_l00124}{124}} of file \mbox{\hyperlink{_event_group_8h_source}{Event\+Group.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/composite/Event\+Group.\+h\item 
+src/composite/\mbox{\hyperlink{_event_group_8cpp}{Event\+Group.\+cpp}}\end{DoxyCompactItemize}

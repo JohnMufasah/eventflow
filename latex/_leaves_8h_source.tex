@@ -1,0 +1,252 @@
+\doxysection{Leaves.\+h}
+\hypertarget{_leaves_8h_source}{}\label{_leaves_8h_source}\index{src/composite/Leaves.h@{src/composite/Leaves.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ LEAVES\_H}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ LEAVES\_H}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_event_leaf_8h}{EventLeaf.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00012}\mbox{\hyperlink{class_safety_briefing}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_safety_briefing}{SafetyBriefing}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00014}00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00015}00015\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ extended;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_safety_briefing_a73b4073773bd89a543d5d0c1962e8c4d}{SafetyBriefing}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a0d985cb3505ccf99cbebf112b284a647}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a7344ab880c1933666d6d4b6dc871c0cd}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a07850232c6cc83c8b21190c8f505e04b}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_safety_briefing_af1bfea67a67ede7f659b47a324de3ef4}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a2ef651eb6087c29f37e6884f506356b9}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a0f1768e9a6162cf84b9fa86a3e44baf6}{onSafetyAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a65fb34676e1aa01baac8535941a108eb}{onCapacityUpdate}}(\textcolor{keywordtype}{int}\ newCapacity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a8843b49a923bcbecec75cad4f83e5cde}{onSafetyBriefingReminder}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00052}00052\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00058}\mbox{\hyperlink{class_laboratory_demonstration}{00058}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_laboratory_demonstration}{LaboratoryDemonstration}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00059}00059\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00060}00060\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00061}00061\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ experimentRunning;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ equipmentLocked;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00066}00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{class_laboratory_demonstration_a376bb4047a47d6ba27f54ea34f7c18f6}{LaboratoryDemonstration}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_aad5a2a87cd70c3afa3f243b9bf0d36e4}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00078}00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_ab8e61bcb642d624bb3d4be376ac0afc1}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_a6dd55166cc538df404a6420941fbbc59}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_laboratory_demonstration_a8201c159b75456c5944697cbe62487f8}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_a86a89a738fd6168b9096ddc5145f3e60}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_ac2d0156059987a90b18419f46ed0666f}{onEmergencyAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_a19fddbf2ea0e5721d2b86ef607851d34}{onCapacityAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00092}00092\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00098}\mbox{\hyperlink{class_food_vendor}{00098}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_food_vendor}{FoodVendor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00099}00099\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00100}00100\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00101}00101\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00102}00102\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00103}00103\ \ \ \ \ \textcolor{keywordtype}{bool}\ serving;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00104}00104\ \ \ \ \ std::set<std::string>\ dietaryOptions;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00106}00106\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00114}00114\ \ \ \ \ \mbox{\hyperlink{class_food_vendor_a2522f990e3e3b7a1acda3f5b7d2fc277}{FoodVendor}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::set<std::string>\&\ dietaryOptions);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00119}00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_aa95e925eb3f883220d1c4e98eb3e7ca7}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00120}00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_add732a1245a621ed26eeab78f047a91b}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00121}00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a10c06ccf493cb054c3de65fda16c193f}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00122}00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_food_vendor_aff5a5fc134b9e2b9b1c743cf76c7df5e}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00123}00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_aa760d306bdf03fec4bab14051d423960}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00125}00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a107bc4c11f0234e0b2caa511b1823349}{onVenueClosure}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00126}00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a24a15f79273c3876cd0424ad737f0e30}{onWeatherAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00127}00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a181c9bd25989f2c2328708f9d8acb567}{onEmergencyAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00134}00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a1fa70fc56118ca01f23e8f2487939728}{onAllergenAlert}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ dietaryTag)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00136}00136\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00142}\mbox{\hyperlink{class_course_presentation}{00142}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_course_presentation}{CoursePresentation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00143}00143\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00144}00144\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00145}00145\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00146}00146\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00147}00147\ \ \ \ \ std::string\ currentRoom;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00149}00149\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00157}00157\ \ \ \ \ \mbox{\hyperlink{class_course_presentation_aef8144fc79a702d9dccfc4c6a0ed731a}{CoursePresentation}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ room);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00162}00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_a2663a49f66fc07ef431762b5bedadebf}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00163}00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_a982310796ea2e42c336bacbd77dbe5cf}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00164}00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_a3746c535024b1ab17046ba5f55e79836}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00165}00165\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_course_presentation_a7b218bc6e20b685d0b61aea5110e3276}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00166}00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_a2ae7fdeb671036717e4e7197969fc488}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00173}00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_abcc1c59e7988dd6b63bed206634367c2}{onRoomChange}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ newRoom)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00181}00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_aedec03e9ca3869c4e92aadfabcd60e22}{onCapacityUpdate}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00182}00182\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newCapacity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00183}00183\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00189}\mbox{\hyperlink{class_transport_coordinator}{00189}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transport_coordinator}{TransportCoordinator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00190}00190\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00191}00191\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00192}00192\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00193}00193\ \ \ \ \ \textcolor{keywordtype}{int}\ shuttlesDeployed;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00195}00195\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00202}00202\ \ \ \ \ \mbox{\hyperlink{class_transport_coordinator_a86d1f5a0d7f722402fccf176c3321050}{TransportCoordinator}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00203}00203\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00204}00204\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ initialShuttles);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00206}00206\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a267e7883aa94bb86c97c937c10cabc02}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00207}00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_aa08e43f3eb072d14d117b7dcc30bb097}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00208}00208\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a74aeb5e8b7bc0b85282bf3c591c695bb}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00209}00209\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_transport_coordinator_a926bb97a69f825b6b0be4f5f3424f870}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00210}00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a55659617c36d29e3df2bec0d0b94a1f3}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00212}00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a38d70f36dde36d69ebf0e99bfb6069a8}{onShuttleOverload}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00213}00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a29638e0da547638985bad449af2e7f90}{onWeatherAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00214}00214\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00220}\mbox{\hyperlink{class_registration_desk}{00220}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_registration_desk}{RegistrationDesk}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00221}00221\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00222}00222\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00223}00223\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00224}00224\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00225}00225\ \ \ \ \ std::string\ currentRoom;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00226}00226\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00228}00228\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00236}00236\ \ \ \ \ \mbox{\hyperlink{class_registration_desk_a867cf2881c12adeecc35a52a1bfb35c2}{RegistrationDesk}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00237}00237\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00238}00238\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00239}00239\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ room);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00241}00241\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a2a8687281da5768cd5c9cd483933833d}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00242}00242\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a2244f5b55291e2e476fd2c7471ef9dea}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00243}00243\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a37e3b2547d9ad2f23cff5e93dc07ce42}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00244}00244\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_registration_desk_a7359d48378096c47d0c78210e35f7103}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00245}00245\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a8e48707c319ef3b0c37a9827f8998fb4}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00247}00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a95e39b4bfe5342db967a37e918021539}{onVenueClosure}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00254}00254\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a74ca8068c574712a722c2ab626234806}{onRoomChange}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00255}00255\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ newRoom)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00256}00256\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00262}\mbox{\hyperlink{class_shuttle_stop}{00262}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shuttle_stop}{ShuttleStop}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00263}00263\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00264}00264\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00265}00265\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00266}00266\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00267}00267\ \ \ \ \ \textcolor{keywordtype}{bool}\ suspended;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00268}00268\ \ \ \ \ \textcolor{keywordtype}{bool}\ departuresOnly;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00270}00270\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00277}00277\ \ \ \ \ \mbox{\hyperlink{class_shuttle_stop_a7e37018074d17443bd55c8fbf1c09722}{ShuttleStop}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00278}00278\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00279}00279\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00281}00281\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_a5e2340d54c13dd5aac0090854fa1b901}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00282}00282\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_aa898299459a53d48e56f4f7afe99cd24}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00283}00283\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_a56c7e43539b266a8040f7f398cb35e86}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00284}00284\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_shuttle_stop_a7127217f318cc596254d14a702b8d2bc}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00285}00285\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_aeb0f3e99b80c9ded1ea3876e139e3eb9}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00287}00287\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_ae388a72cdd0a978619656f710ad506da}{onShuttleOverload}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00288}00288\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_aafb9b0bdd726671a2eb2380a8187fc55}{onWeatherAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00289}00289\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_ab7597ab5dc80011ef7fc04e878f8ce30}{onEmergencyAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00290}00290\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00296}\mbox{\hyperlink{class_student_guide}{00296}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_student_guide}{StudentGuide}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00297}00297\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00298}00298\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00299}00299\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00300}00300\ \ \ \ \ \textcolor{keywordtype}{int}\ groupSize;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00301}00301\ \ \ \ \ \textcolor{keywordtype}{bool}\ redirecting;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00302}00302\ \ \ \ \ \textcolor{keywordtype}{bool}\ evacuationMode;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00304}00304\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00311}00311\ \ \ \ \ \mbox{\hyperlink{class_student_guide_a3242f15301b71793c506812bac197fe8}{StudentGuide}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00312}00312\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00313}00313\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ groupSize);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00315}00315\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a7c4278df81094d9d2175f951e2b371bc}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00316}00316\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a00168df3b63227e2dc17104d0c6ce9cd}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00317}00317\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a16f909ada5206d880569e5e3326d07e7}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00318}00318\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_student_guide_a1a440c5d92a0f12c9cd79d69ba4d4c1d}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00319}00319\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a704ee84c703333ae2fe5a55f2c5dce16}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00321}00321\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_adfe6d79b34d7c795e6298b6eacdd16aa}{onSafetyAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00322}00322\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_aed2fa3162772d44de18512d818d9939a}{onCongestion}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00323}00323\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_abb8783f8e414e93447f53996e58ccb93}{onEmergencyAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00330}00330\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_ad1341c4f297875baf9a5ce9c84de25b6}{onRoomChange}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00331}00331\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ newRoom)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00332}00332\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00338}00338\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a3079026c24136a49ebb25360065d392c}{onDepartmentMismatch}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00339}00339\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ correctFaculty)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00340}00340\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00341}00341\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00342}00342\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00346}\mbox{\hyperlink{class_information_desk}{00346}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_information_desk}{InformationDesk}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_leaf}{EventLeaf}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00347}00347\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00348}00348\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00349}00349\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00350}00350\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00351}00351\ \ \ \ \ \textcolor{keywordtype}{bool}\ operational;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00352}00352\ \ \ \ \ \textcolor{keywordtype}{bool}\ evacuationInstructions;}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00353}00353\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00354}00354\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00361}00361\ \ \ \ \ \mbox{\hyperlink{class_information_desk_a02ed5740aef013bbfd068727bb74616c}{InformationDesk}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00362}00362\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00363}00363\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00365}00365\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_a05045ad9063e074ecca50715c3dd833d}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00366}00366\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_ad9c600ce413f4be6963616daa7090fc4}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00367}00367\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_ad585e322e67accae404f3e5c2f84451c}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00368}00368\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_information_desk_a0c02ffc05696b3593bdb8d7ecddb6994}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00369}00369\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_ac6aaa02339132bc177855ee10ce9636f}{handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00374}00374\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_ac1e8cabcc0da30a6b39cb74b1efed759}{onEmergencyAlert}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00375}00375\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00381}00381\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_a94ef6eccf145770b6e3fb0f3e1553b19}{onDepartmentMismatch}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00382}00382\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ correctFaculty)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00383}00383\ \};}
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00384}00384\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8h_source_l00385}00385\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

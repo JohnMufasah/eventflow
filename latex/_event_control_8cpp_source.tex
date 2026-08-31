@@ -1,0 +1,57 @@
+\doxysection{Event\+Control.\+cpp}
+\hypertarget{_event_control_8cpp_source}{}\label{_event_control_8cpp_source}\index{src/observer/EventControl.cpp@{src/observer/EventControl.cpp}}
+\mbox{\hyperlink{_event_control_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}EventControl.h"{}}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}EventNotice.h"{}}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00012}\mbox{\hyperlink{class_event_control_a3b750b586a6c04f94a46f6a657c69e12}{00012}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_control_a3b750b586a6c04f94a46f6a657c69e12}{EventControl::attach}}(\mbox{\hyperlink{class_observer}{Observer}}*\ observer)}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (observer\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (std::find(}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ observers.begin(),}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ observers.end(),}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ observer)\ ==\ observers.end())}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ observers.push\_back(observer);}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00028}\mbox{\hyperlink{class_event_control_a082ba83cbdc80ff220232967103db5b7}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_control_a082ba83cbdc80ff220232967103db5b7}{EventControl::detach}}(\mbox{\hyperlink{class_observer}{Observer}}*\ observer)}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ observers.begin(),}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ observers.end(),}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ observer);}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ observers.end())}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ observers.erase(it);}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00041}\mbox{\hyperlink{class_event_control_a3f1de9c787f6071867832964938907f2}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_control_a3f1de9c787f6071867832964938907f2}{EventControl::notify}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_observer}{Observer}}*\ observer\ :\ observers)}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (observer\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ observer-\/>update(notice);}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_control_8cpp_source_l00055}00055\ \}}
+
+\end{DoxyCode}

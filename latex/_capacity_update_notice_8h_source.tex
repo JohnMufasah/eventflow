@@ -1,0 +1,34 @@
+\doxysection{Capacity\+Update\+Notice.\+h}
+\hypertarget{_capacity_update_notice_8h_source}{}\label{_capacity_update_notice_8h_source}\index{src/observer/CapacityUpdateNotice.h@{src/observer/CapacityUpdateNotice.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ CAPACITYUPDATENOTICE\_H}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ CAPACITYUPDATENOTICE\_H}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}EventNotice.h"{}}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00009}\mbox{\hyperlink{class_capacity_update_notice}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_capacity_update_notice}{CapacityUpdateNotice}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_notice}{EventNotice}}}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00011}00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{int}\ oldCapacity;}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{int}\ newCapacity;}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00015}00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{class_capacity_update_notice_a85410674c6834a7a4bdf9cef6ce4b750}{CapacityUpdateNotice}}(}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ message,}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ location,}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ oldCapacity,}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newCapacity);}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_capacity_update_notice_ab34fbed77b03a95052fd82e227e2f7bc}{getOldCapacity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_capacity_update_notice_a60453fd11b24fe9878ed6f1b076c5d05}{getNewCapacity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00043}00043\ \ \ \ \ std::string\ \mbox{\hyperlink{class_capacity_update_notice_a3a7971cc3323a7ebb47ab3405f6a3113}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_capacity_update_notice_abdb58b78187c9342a4f62825a99688f7}{affect}}(\mbox{\hyperlink{class_event_component}{EventComponent}}*\ component)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00051}00051\ \};}
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_capacity_update_notice_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

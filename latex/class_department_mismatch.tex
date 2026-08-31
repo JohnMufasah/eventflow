@@ -1,0 +1,144 @@
+\doxysection{Department\+Mismatch Class Reference}
+\hypertarget{class_department_mismatch}{}\label{class_department_mismatch}\index{DepartmentMismatch@{DepartmentMismatch}}
+
+
+Notice indicating that a visitor is in the wrong faculty.  
+
+
+
+
+{\ttfamily \#include $<$Department\+Mismatch.\+h$>$}
+
+Inheritance diagram for Department\+Mismatch\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_department_mismatch}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_department_mismatch_af32bf707e64a1c2afc56db3a4beb422c}{Department\+Mismatch}} (const std\+::string \&message, const std\+::string \&location, const std\+::string \&correct\+Faculty)
+\begin{DoxyCompactList}\small\item\em Creates a department mismatch notice. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_department_mismatch_a443091e7b3ea82a6b979d1c47a29198e}{get\+Correct\+Faculty}} () const
+\begin{DoxyCompactList}\small\item\em Returns the correct faculty. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_department_mismatch_a08ed0a26b814cba6a5e66b9a75129a70}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the notice type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_department_mismatch_a405e147a8d633d291fa4eaeb1e3dbc9f}{affect}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component) override
+\begin{DoxyCompactList}\small\item\em Applies the department mismatch response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f}{Event\+Notice}} (const std\+::string \&message, const std\+::string \&location)
+\begin{DoxyCompactList}\small\item\em Creates an event notice. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the notice message. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Returns the location associated with the notice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3}{message}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a77095d9452e8978ffeb307523ffd44c7}{location}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notice indicating that a visitor is in the wrong faculty. 
+
+Definition at line \mbox{\hyperlink{_department_mismatch_8h_source_l00009}{9}} of file \mbox{\hyperlink{_department_mismatch_8h_source}{Department\+Mismatch.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_department_mismatch_af32bf707e64a1c2afc56db3a4beb422c}\label{class_department_mismatch_af32bf707e64a1c2afc56db3a4beb422c} 
+\index{DepartmentMismatch@{DepartmentMismatch}!DepartmentMismatch@{DepartmentMismatch}}
+\index{DepartmentMismatch@{DepartmentMismatch}!DepartmentMismatch@{DepartmentMismatch}}
+\doxysubsubsection{\texorpdfstring{DepartmentMismatch()}{DepartmentMismatch()}}
+{\footnotesize\ttfamily Department\+Mismatch\+::\+Department\+Mismatch (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{location,  }\item[{const std\+::string \&}]{correct\+Faculty }\end{DoxyParamCaption})}
+
+
+
+Creates a department mismatch notice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Description of the mismatch. \\
+\hline
+{\em location} & Location associated with the notice. \\
+\hline
+{\em correct\+Faculty} & \doxylink{class_faculty}{Faculty} the visitor should be directed to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_department_mismatch_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_department_mismatch_8cpp_source}{Department\+Mismatch.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_department_mismatch_a405e147a8d633d291fa4eaeb1e3dbc9f}\label{class_department_mismatch_a405e147a8d633d291fa4eaeb1e3dbc9f} 
+\index{DepartmentMismatch@{DepartmentMismatch}!affect@{affect}}
+\index{affect@{affect}!DepartmentMismatch@{DepartmentMismatch}}
+\doxysubsubsection{\texorpdfstring{affect()}{affect()}}
+{\footnotesize\ttfamily void Department\+Mismatch\+::affect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the department mismatch response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the notice. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_department_mismatch_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_department_mismatch_8cpp_source}{Department\+Mismatch.\+cpp}}.
+
+\Hypertarget{class_department_mismatch_a443091e7b3ea82a6b979d1c47a29198e}\label{class_department_mismatch_a443091e7b3ea82a6b979d1c47a29198e} 
+\index{DepartmentMismatch@{DepartmentMismatch}!getCorrectFaculty@{getCorrectFaculty}}
+\index{getCorrectFaculty@{getCorrectFaculty}!DepartmentMismatch@{DepartmentMismatch}}
+\doxysubsubsection{\texorpdfstring{getCorrectFaculty()}{getCorrectFaculty()}}
+{\footnotesize\ttfamily std\+::string Department\+Mismatch\+::get\+Correct\+Faculty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the correct faculty. 
+
+
+
+Definition at line \mbox{\hyperlink{_department_mismatch_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_department_mismatch_8cpp_source}{Department\+Mismatch.\+cpp}}.
+
+\Hypertarget{class_department_mismatch_a08ed0a26b814cba6a5e66b9a75129a70}\label{class_department_mismatch_a08ed0a26b814cba6a5e66b9a75129a70} 
+\index{DepartmentMismatch@{DepartmentMismatch}!getType@{getType}}
+\index{getType@{getType}!DepartmentMismatch@{DepartmentMismatch}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Department\+Mismatch\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the notice type. 
+
+
+
+Implements \mbox{\hyperlink{class_event_notice_adf73e474907ceddc5707c759391db35f}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_department_mismatch_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_department_mismatch_8cpp_source}{Department\+Mismatch.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Department\+Mismatch.\+h\item 
+src/observer/Department\+Mismatch.\+cpp\end{DoxyCompactItemize}

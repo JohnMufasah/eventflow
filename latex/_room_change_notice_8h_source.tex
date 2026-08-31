@@ -1,0 +1,30 @@
+\doxysection{Room\+Change\+Notice.\+h}
+\hypertarget{_room_change_notice_8h_source}{}\label{_room_change_notice_8h_source}\index{src/observer/RoomChangeNotice.h@{src/observer/RoomChangeNotice.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ ROOMCHANGENOTICE\_H}}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ ROOMCHANGENOTICE\_H}}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}EventNotice.h"{}}}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00009}\mbox{\hyperlink{class_room_change_notice}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room_change_notice}{RoomChangeNotice}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event_notice}{EventNotice}}}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00011}00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00012}00012\ \ \ \ \ std::string\ newRoom;}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00014}00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_room_change_notice_a7e0ca195418ebbe965535d13332ab1e8}{RoomChangeNotice}}(}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ message,}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ location,}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ newRoom);}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00030}00030\ \ \ \ \ std::string\ \mbox{\hyperlink{class_room_change_notice_a84d5c178191684e84c1f8391f19a046d}{getNewRoom}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00035}00035\ \ \ \ \ std::string\ \mbox{\hyperlink{class_room_change_notice_a90792c66832a06a6e951f2fb69862b2f}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_change_notice_a376c3a781796e646a96f33d3af879155}{affect}}(\mbox{\hyperlink{class_event_component}{EventComponent}}*\ component)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00043}00043\ \};}
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_room_change_notice_8h_source_l00045}00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

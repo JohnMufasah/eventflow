@@ -1,0 +1,127 @@
+\doxysection{Event\+Notification\+Handler Class Reference}
+\hypertarget{class_event_notification_handler}{}\label{class_event_notification_handler}\index{EventNotificationHandler@{EventNotificationHandler}}
+
+
+\doxylink{class_observer}{Observer} that forwards notices to an \doxylink{class_event_component}{Event\+Component}.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Notification\+Handler.\+h$>$}
+
+Inheritance diagram for Event\+Notification\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_event_notification_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_notification_handler_a6a51333a930d7ce04b53410ed185b09f}{Event\+Notification\+Handler}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}target)
+\begin{DoxyCompactList}\small\item\em Creates a notification handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_notification_handler_a901956c5c0d6269df72dd22b7480ff65}{update}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Receives a pushed \doxylink{class_event_notice}{Event\+Notice}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_event_notification_handler_a703924c1dbfc7cd3f993d2846f751b30}{get\+Target}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_notification_handler_aefc381b6ce847d5fbb932f04b1dbdebe}{set\+Target}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}new\+Target)
+\begin{DoxyCompactList}\small\item\em Changes the target component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_observer}{Observer} that forwards notices to an \doxylink{class_event_component}{Event\+Component}. 
+
+Definition at line \mbox{\hyperlink{_event_notification_handler_8h_source_l00012}{12}} of file \mbox{\hyperlink{_event_notification_handler_8h_source}{Event\+Notification\+Handler.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_notification_handler_a6a51333a930d7ce04b53410ed185b09f}\label{class_event_notification_handler_a6a51333a930d7ce04b53410ed185b09f} 
+\index{EventNotificationHandler@{EventNotificationHandler}!EventNotificationHandler@{EventNotificationHandler}}
+\index{EventNotificationHandler@{EventNotificationHandler}!EventNotificationHandler@{EventNotificationHandler}}
+\doxysubsubsection{\texorpdfstring{EventNotificationHandler()}{EventNotificationHandler()}}
+{\footnotesize\ttfamily Event\+Notification\+Handler\+::\+Event\+Notification\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates a notification handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Component that receives forwarded notices. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_event_notification_handler_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_event_notification_handler_8cpp_source}{Event\+Notification\+Handler.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_notification_handler_a703924c1dbfc7cd3f993d2846f751b30}\label{class_event_notification_handler_a703924c1dbfc7cd3f993d2846f751b30} 
+\index{EventNotificationHandler@{EventNotificationHandler}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!EventNotificationHandler@{EventNotificationHandler}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*} Event\+Notification\+Handler\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current target. 
+
+
+
+Definition at line \mbox{\hyperlink{_event_notification_handler_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_event_notification_handler_8cpp_source}{Event\+Notification\+Handler.\+cpp}}.
+
+\Hypertarget{class_event_notification_handler_aefc381b6ce847d5fbb932f04b1dbdebe}\label{class_event_notification_handler_aefc381b6ce847d5fbb932f04b1dbdebe} 
+\index{EventNotificationHandler@{EventNotificationHandler}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!EventNotificationHandler@{EventNotificationHandler}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
+{\footnotesize\ttfamily void Event\+Notification\+Handler\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{new\+Target }\end{DoxyParamCaption})}
+
+
+
+Changes the target component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Target} & New component to receive notices. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_event_notification_handler_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_event_notification_handler_8cpp_source}{Event\+Notification\+Handler.\+cpp}}.
+
+\Hypertarget{class_event_notification_handler_a901956c5c0d6269df72dd22b7480ff65}\label{class_event_notification_handler_a901956c5c0d6269df72dd22b7480ff65} 
+\index{EventNotificationHandler@{EventNotificationHandler}!update@{update}}
+\index{update@{update}!EventNotificationHandler@{EventNotificationHandler}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Event\+Notification\+Handler\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Receives a pushed \doxylink{class_event_notice}{Event\+Notice}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notice being received. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_observer_a13e53cfcd28c6d8e0e387a71d8d0f67f}{Observer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_notification_handler_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_event_notification_handler_8cpp_source}{Event\+Notification\+Handler.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Event\+Notification\+Handler.\+h\item 
+src/observer/\mbox{\hyperlink{_event_notification_handler_8cpp}{Event\+Notification\+Handler.\+cpp}}\end{DoxyCompactItemize}

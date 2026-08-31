@@ -1,0 +1,30 @@
+\doxysection{Event\+Notification\+Handler.\+h}
+\hypertarget{_event_notification_handler_8h_source}{}\label{_event_notification_handler_8h_source}\index{src/observer/EventNotificationHandler.h@{src/observer/EventNotificationHandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ EVENTNOTIFICATIONHANDLER\_H}}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ EVENTNOTIFICATIONHANDLER\_H}}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00006}00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event_notice}{EventNotice}};}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00007}00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event_component}{EventComponent}};}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00012}\mbox{\hyperlink{class_event_notification_handler}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event_notification_handler}{EventNotificationHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_observer}{Observer}}}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00014}00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{class_event_component}{EventComponent}}*\ target;}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00017}00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_event_notification_handler_a6a51333a930d7ce04b53410ed185b09f}{EventNotificationHandler}}(\mbox{\hyperlink{class_event_component}{EventComponent}}*\ target);}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_notification_handler_a901956c5c0d6269df72dd22b7480ff65}{update}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{class_event_component}{EventComponent}}*\ \mbox{\hyperlink{class_event_notification_handler_a703924c1dbfc7cd3f993d2846f751b30}{getTarget}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_notification_handler_aefc381b6ce847d5fbb932f04b1dbdebe}{setTarget}}(\mbox{\hyperlink{class_event_component}{EventComponent}}*\ newTarget);}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00043}00043\ \};}
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_event_notification_handler_8h_source_l00045}00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

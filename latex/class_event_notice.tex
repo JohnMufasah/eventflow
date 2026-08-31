@@ -1,0 +1,164 @@
+\doxysection{Event\+Notice Class Reference}
+\hypertarget{class_event_notice}{}\label{class_event_notice}\index{EventNotice@{EventNotice}}
+
+
+Base class for notifications used by Event\+Flow.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Notice.\+h$>$}
+
+Inheritance diagram for Event\+Notice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.103448cm]{class_event_notice}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f}{Event\+Notice}} (const std\+::string \&message, const std\+::string \&location)
+\begin{DoxyCompactList}\small\item\em Creates an event notice. \end{DoxyCompactList}\item 
+\Hypertarget{class_event_notice_ac941bacfad864ffc5841fcfbff57019f}\label{class_event_notice_ac941bacfad864ffc5841fcfbff57019f} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the notice message. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Returns the location associated with the notice. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_event_notice_adf73e474907ceddc5707c759391db35f}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the type of notice. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component)=0
+\begin{DoxyCompactList}\small\item\em Applies the notice to an event component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3}{message}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a77095d9452e8978ffeb307523ffd44c7}{location}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for notifications used by Event\+Flow. 
+
+Definition at line \mbox{\hyperlink{_event_notice_8h_source_l00011}{11}} of file \mbox{\hyperlink{_event_notice_8h_source}{Event\+Notice.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f}\label{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f} 
+\index{EventNotice@{EventNotice}!EventNotice@{EventNotice}}
+\index{EventNotice@{EventNotice}!EventNotice@{EventNotice}}
+\doxysubsubsection{\texorpdfstring{EventNotice()}{EventNotice()}}
+{\footnotesize\ttfamily Event\+Notice\+::\+Event\+Notice (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{location }\end{DoxyParamCaption})}
+
+
+
+Creates an event notice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Description of the notice. \\
+\hline
+{\em location} & Location associated with the notice. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_event_notice_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_event_notice_8cpp_source}{Event\+Notice.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_notice_a440494ad677db03c18981794afe54886}\label{class_event_notice_a440494ad677db03c18981794afe54886} 
+\index{EventNotice@{EventNotice}!affect@{affect}}
+\index{affect@{affect}!EventNotice@{EventNotice}}
+\doxysubsubsection{\texorpdfstring{affect()}{affect()}}
+{\footnotesize\ttfamily virtual void Event\+Notice\+::affect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Applies the notice to an event component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the notice. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_allergen_alert_ad805490590f28b6d57f5f2fe7a152775}{Allergen\+Alert}}, \mbox{\hyperlink{class_capacity_alert_a885f3e991e26cb65659d9c02a8b5c742}{Capacity\+Alert}}, \mbox{\hyperlink{class_capacity_update_notice_abdb58b78187c9342a4f62825a99688f7}{Capacity\+Update\+Notice}}, \mbox{\hyperlink{class_department_mismatch_a405e147a8d633d291fa4eaeb1e3dbc9f}{Department\+Mismatch}}, \mbox{\hyperlink{class_emergency_alert_a266a6474511db59aeebaf414d6b806c9}{Emergency\+Alert}}, \mbox{\hyperlink{class_room_change_notice_a376c3a781796e646a96f33d3af879155}{Room\+Change\+Notice}}, and \mbox{\hyperlink{class_venue_closure_notice_a30eebf1620d01cf40e648b94026fdb36}{Venue\+Closure\+Notice}}.
+
+\Hypertarget{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79}\label{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79} 
+\index{EventNotice@{EventNotice}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!EventNotice@{EventNotice}}
+\doxysubsubsection{\texorpdfstring{getLocation()}{getLocation()}}
+{\footnotesize\ttfamily std\+::string Event\+Notice\+::get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the location associated with the notice. 
+
+
+
+Definition at line \mbox{\hyperlink{_event_notice_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_event_notice_8cpp_source}{Event\+Notice.\+cpp}}.
+
+\Hypertarget{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2}\label{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2} 
+\index{EventNotice@{EventNotice}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!EventNotice@{EventNotice}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily std\+::string Event\+Notice\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the notice message. 
+
+
+
+Definition at line \mbox{\hyperlink{_event_notice_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_event_notice_8cpp_source}{Event\+Notice.\+cpp}}.
+
+\Hypertarget{class_event_notice_adf73e474907ceddc5707c759391db35f}\label{class_event_notice_adf73e474907ceddc5707c759391db35f} 
+\index{EventNotice@{EventNotice}!getType@{getType}}
+\index{getType@{getType}!EventNotice@{EventNotice}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual std\+::string Event\+Notice\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the type of notice. 
+
+
+
+Implemented in \mbox{\hyperlink{class_allergen_alert_aa273b8db3be825679bee620671413968}{Allergen\+Alert}}, \mbox{\hyperlink{class_capacity_alert_aa8e152bd2288d83a2282e40218c0a096}{Capacity\+Alert}}, \mbox{\hyperlink{class_capacity_update_notice_a3a7971cc3323a7ebb47ab3405f6a3113}{Capacity\+Update\+Notice}}, \mbox{\hyperlink{class_department_mismatch_a08ed0a26b814cba6a5e66b9a75129a70}{Department\+Mismatch}}, \mbox{\hyperlink{class_emergency_alert_aeed4a4bfac00a91766e78245a6db5283}{Emergency\+Alert}}, \mbox{\hyperlink{class_room_change_notice_a90792c66832a06a6e951f2fb69862b2f}{Room\+Change\+Notice}}, and \mbox{\hyperlink{class_venue_closure_notice_a1eaf4f566104cf2799e9df7412ce0130}{Venue\+Closure\+Notice}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_event_notice_a77095d9452e8978ffeb307523ffd44c7}\label{class_event_notice_a77095d9452e8978ffeb307523ffd44c7} 
+\index{EventNotice@{EventNotice}!location@{location}}
+\index{location@{location}!EventNotice@{EventNotice}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily std\+::string Event\+Notice\+::location\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_event_notice_8h_source_l00015}{15}} of file \mbox{\hyperlink{_event_notice_8h_source}{Event\+Notice.\+h}}.
+
+\Hypertarget{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3}\label{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3} 
+\index{EventNotice@{EventNotice}!message@{message}}
+\index{message@{message}!EventNotice@{EventNotice}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string Event\+Notice\+::message\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_event_notice_8h_source_l00014}{14}} of file \mbox{\hyperlink{_event_notice_8h_source}{Event\+Notice.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Event\+Notice.\+h\item 
+src/observer/\mbox{\hyperlink{_event_notice_8cpp}{Event\+Notice.\+cpp}}\end{DoxyCompactItemize}

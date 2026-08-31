@@ -1,0 +1,240 @@
+\doxysection{Laboratory\+Demonstration Class Reference}
+\hypertarget{class_laboratory_demonstration}{}\label{class_laboratory_demonstration}\index{LaboratoryDemonstration@{LaboratoryDemonstration}}
+
+
+Represents a laboratory demonstration.  
+
+
+
+
+{\ttfamily \#include $<$Leaves.\+h$>$}
+
+Inheritance diagram for Laboratory\+Demonstration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_laboratory_demonstration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_laboratory_demonstration_a376bb4047a47d6ba27f54ea34f7c18f6}{Laboratory\+Demonstration}} (const std\+::string \&name, int capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a laboratory demonstration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_laboratory_demonstration_aad5a2a87cd70c3afa3f243b9bf0d36e4}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_laboratory_demonstration_ab8e61bcb642d624bb3d4be376ac0afc1}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_laboratory_demonstration_a6dd55166cc538df404a6420941fbbc59}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the current status of the component. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_laboratory_demonstration_a8201c159b75456c5944697cbe62487f8}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the capacity associated with the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_laboratory_demonstration_a86a89a738fd6168b9096ddc5145f3e60}{handle\+Notice}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Handles a notification received by the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_laboratory_demonstration_ac2d0156059987a90b18419f46ed0666f}{on\+Emergency\+Alert}} () override
+\begin{DoxyCompactList}\small\item\em Stops the experiment and locks the equipment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_laboratory_demonstration_a19fddbf2ea0e5721d2b86ef607851d34}{on\+Capacity\+Alert}} () override
+\begin{DoxyCompactList}\small\item\em Responds when the laboratory reaches capacity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_leaf}{Event\+Leaf}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_event_leaf_a5eda5d24d904b4400afbafb9adea4b2e}{\texorpdfstring{$\sim$}{\string~}\+Event\+Leaf}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_event_component_a4f93a9cbdd78da5b800a39868fc4e09c}{on\+Capacity\+Update}} (int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Updates the component\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_aec4839494e41e077a0cea87a1d1c9c47}{on\+Venue\+Closure}} ()
+\begin{DoxyCompactList}\small\item\em Handles a venue closure notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a8649a7d0f5703e55b00f2acbef1dfa81}{on\+Room\+Change}} (const std\+::string \&new\+Room)
+\begin{DoxyCompactList}\small\item\em Handles a room change notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a72044b70a5e083f682335152500cda70}{on\+Safety\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a415af28892c73148fc8f424354811c8a}{on\+Weather\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a weather alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_abdf4090503098b9451ac2fd1bfd5d8bd}{on\+Congestion}} ()
+\begin{DoxyCompactList}\small\item\em Handles an exhibition congestion notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a2fabd68692363f9338fdf6f53a8d4e64}{on\+Shuttle\+Overload}} ()
+\begin{DoxyCompactList}\small\item\em Handles a shuttle overload notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a7718f210ff03ddaf04618459e58ec143}{on\+Allergen\+Alert}} (const std\+::string \&dietary\+Tag)
+\begin{DoxyCompactList}\small\item\em Handles an allergen or dietary alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a89faa0da6eda79417910a81c1228da66}{on\+Department\+Mismatch}} (const std\+::string \&correct\+Faculty)
+\begin{DoxyCompactList}\small\item\em Handles a department mismatch notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a63967a66a104928431b085397137cd80}{on\+Safety\+Briefing\+Reminder}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety briefing reminder. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_event_component_a0b229e18d9611b8109c0a5527e6b01df}{\texorpdfstring{$\sim$}{\string~}\+Event\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a laboratory demonstration. 
+
+Definition at line \mbox{\hyperlink{_leaves_8h_source_l00058}{58}} of file \mbox{\hyperlink{_leaves_8h_source}{Leaves.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_laboratory_demonstration_a376bb4047a47d6ba27f54ea34f7c18f6}\label{class_laboratory_demonstration_a376bb4047a47d6ba27f54ea34f7c18f6} 
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\doxysubsubsection{\texorpdfstring{LaboratoryDemonstration()}{LaboratoryDemonstration()}}
+{\footnotesize\ttfamily Laboratory\+Demonstration\+::\+Laboratory\+Demonstration (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a laboratory demonstration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the demonstration. \\
+\hline
+{\em capacity} & Maximum capacity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_laboratory_demonstration_ab8e61bcb642d624bb3d4be376ac0afc1}\label{class_laboratory_demonstration_ab8e61bcb642d624bb3d4be376ac0afc1} 
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!close@{close}}
+\index{close@{close}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Laboratory\+Demonstration\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_laboratory_demonstration_a8201c159b75456c5944697cbe62487f8}\label{class_laboratory_demonstration_a8201c159b75456c5944697cbe62487f8} 
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Laboratory\+Demonstration\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the capacity associated with the component. 
+
+\begin{DoxyReturn}{Returns}
+Component capacity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_laboratory_demonstration_a86a89a738fd6168b9096ddc5145f3e60}\label{class_laboratory_demonstration_a86a89a738fd6168b9096ddc5145f3e60} 
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!handleNotice@{handleNotice}}
+\index{handleNotice@{handleNotice}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\doxysubsubsection{\texorpdfstring{handleNotice()}{handleNotice()}}
+{\footnotesize\ttfamily void Laboratory\+Demonstration\+::handle\+Notice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a notification received by the component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification being received. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_component_a0af75223ef19c04e1316a182b400bdc4}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_laboratory_demonstration_a19fddbf2ea0e5721d2b86ef607851d34}\label{class_laboratory_demonstration_a19fddbf2ea0e5721d2b86ef607851d34} 
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!onCapacityAlert@{onCapacityAlert}}
+\index{onCapacityAlert@{onCapacityAlert}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\doxysubsubsection{\texorpdfstring{onCapacityAlert()}{onCapacityAlert()}}
+{\footnotesize\ttfamily void Laboratory\+Demonstration\+::on\+Capacity\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Responds when the laboratory reaches capacity. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_ac7af43a3cfad36b92bf77d4c7f957002}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00138}{138}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_laboratory_demonstration_ac2d0156059987a90b18419f46ed0666f}\label{class_laboratory_demonstration_ac2d0156059987a90b18419f46ed0666f} 
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!onEmergencyAlert@{onEmergencyAlert}}
+\index{onEmergencyAlert@{onEmergencyAlert}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\doxysubsubsection{\texorpdfstring{onEmergencyAlert()}{onEmergencyAlert()}}
+{\footnotesize\ttfamily void Laboratory\+Demonstration\+::on\+Emergency\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stops the experiment and locks the equipment. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_ad02b6a3271d3612e51bb6bb4a0015049}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_laboratory_demonstration_aad5a2a87cd70c3afa3f243b9bf0d36e4}\label{class_laboratory_demonstration_aad5a2a87cd70c3afa3f243b9bf0d36e4} 
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!open@{open}}
+\index{open@{open}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Laboratory\+Demonstration\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_laboratory_demonstration_a6dd55166cc538df404a6420941fbbc59}\label{class_laboratory_demonstration_a6dd55166cc538df404a6420941fbbc59} 
+\index{LaboratoryDemonstration@{LaboratoryDemonstration}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!LaboratoryDemonstration@{LaboratoryDemonstration}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Laboratory\+Demonstration\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the current status of the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/composite/Leaves.\+h\item 
+src/composite/\mbox{\hyperlink{_leaves_8cpp}{Leaves.\+cpp}}\end{DoxyCompactItemize}

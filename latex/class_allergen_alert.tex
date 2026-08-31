@@ -1,0 +1,144 @@
+\doxysection{Allergen\+Alert Class Reference}
+\hypertarget{class_allergen_alert}{}\label{class_allergen_alert}\index{AllergenAlert@{AllergenAlert}}
+
+
+Notice concerning a dietary or allergen requirement.  
+
+
+
+
+{\ttfamily \#include $<$Allergen\+Alert.\+h$>$}
+
+Inheritance diagram for Allergen\+Alert\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_allergen_alert}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_allergen_alert_abd9ac2885c2466bd5d20ba87ca507524}{Allergen\+Alert}} (const std\+::string \&message, const std\+::string \&location, const std\+::string \&dietary\+Tag)
+\begin{DoxyCompactList}\small\item\em Creates an allergen alert. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_allergen_alert_a4f440accb80bbe1394f0bda36ab3e408}{get\+Dietary\+Tag}} () const
+\begin{DoxyCompactList}\small\item\em Returns the dietary tag associated with the alert. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_allergen_alert_aa273b8db3be825679bee620671413968}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the notice type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_allergen_alert_ad805490590f28b6d57f5f2fe7a152775}{affect}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component) override
+\begin{DoxyCompactList}\small\item\em Applies the allergen response to a component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f}{Event\+Notice}} (const std\+::string \&message, const std\+::string \&location)
+\begin{DoxyCompactList}\small\item\em Creates an event notice. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the notice message. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Returns the location associated with the notice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3}{message}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a77095d9452e8978ffeb307523ffd44c7}{location}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notice concerning a dietary or allergen requirement. 
+
+Definition at line \mbox{\hyperlink{_allergen_alert_8h_source_l00009}{9}} of file \mbox{\hyperlink{_allergen_alert_8h_source}{Allergen\+Alert.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_allergen_alert_abd9ac2885c2466bd5d20ba87ca507524}\label{class_allergen_alert_abd9ac2885c2466bd5d20ba87ca507524} 
+\index{AllergenAlert@{AllergenAlert}!AllergenAlert@{AllergenAlert}}
+\index{AllergenAlert@{AllergenAlert}!AllergenAlert@{AllergenAlert}}
+\doxysubsubsection{\texorpdfstring{AllergenAlert()}{AllergenAlert()}}
+{\footnotesize\ttfamily Allergen\+Alert\+::\+Allergen\+Alert (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{location,  }\item[{const std\+::string \&}]{dietary\+Tag }\end{DoxyParamCaption})}
+
+
+
+Creates an allergen alert. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Description of the alert. \\
+\hline
+{\em location} & Location where the alert applies. \\
+\hline
+{\em dietary\+Tag} & Dietary or allergen tag involved. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_allergen_alert_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_allergen_alert_8cpp_source}{Allergen\+Alert.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_allergen_alert_ad805490590f28b6d57f5f2fe7a152775}\label{class_allergen_alert_ad805490590f28b6d57f5f2fe7a152775} 
+\index{AllergenAlert@{AllergenAlert}!affect@{affect}}
+\index{affect@{affect}!AllergenAlert@{AllergenAlert}}
+\doxysubsubsection{\texorpdfstring{affect()}{affect()}}
+{\footnotesize\ttfamily void Allergen\+Alert\+::affect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the allergen response to a component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the alert. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_allergen_alert_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_allergen_alert_8cpp_source}{Allergen\+Alert.\+cpp}}.
+
+\Hypertarget{class_allergen_alert_a4f440accb80bbe1394f0bda36ab3e408}\label{class_allergen_alert_a4f440accb80bbe1394f0bda36ab3e408} 
+\index{AllergenAlert@{AllergenAlert}!getDietaryTag@{getDietaryTag}}
+\index{getDietaryTag@{getDietaryTag}!AllergenAlert@{AllergenAlert}}
+\doxysubsubsection{\texorpdfstring{getDietaryTag()}{getDietaryTag()}}
+{\footnotesize\ttfamily std\+::string Allergen\+Alert\+::get\+Dietary\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the dietary tag associated with the alert. 
+
+
+
+Definition at line \mbox{\hyperlink{_allergen_alert_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_allergen_alert_8cpp_source}{Allergen\+Alert.\+cpp}}.
+
+\Hypertarget{class_allergen_alert_aa273b8db3be825679bee620671413968}\label{class_allergen_alert_aa273b8db3be825679bee620671413968} 
+\index{AllergenAlert@{AllergenAlert}!getType@{getType}}
+\index{getType@{getType}!AllergenAlert@{AllergenAlert}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Allergen\+Alert\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the notice type. 
+
+
+
+Implements \mbox{\hyperlink{class_event_notice_adf73e474907ceddc5707c759391db35f}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_allergen_alert_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_allergen_alert_8cpp_source}{Allergen\+Alert.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Allergen\+Alert.\+h\item 
+src/observer/Allergen\+Alert.\+cpp\end{DoxyCompactItemize}

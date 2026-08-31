@@ -1,0 +1,171 @@
+\doxysection{Venue\+Closure\+Notice Class Reference}
+\hypertarget{class_venue_closure_notice}{}\label{class_venue_closure_notice}\index{VenueClosureNotice@{VenueClosureNotice}}
+
+
+Notice indicating that a venue has been closed.  
+
+
+
+
+{\ttfamily \#include $<$Venue\+Closure\+Notice.\+h$>$}
+
+Inheritance diagram for Venue\+Closure\+Notice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_venue_closure_notice}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_venue_closure_notice_afb7b8d575e01fac749ccc7735c52a2dd}{Venue\+Closure\+Notice}} (const std\+::string \&message, const std\+::string \&location, const std\+::string \&venue)
+\begin{DoxyCompactList}\small\item\em Creates a venue closure notice. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_venue_closure_notice_a3f0e264c453c86a8e40c39d39a4b48e0}{get\+Venue}} () const
+\begin{DoxyCompactList}\small\item\em Returns the closed venue. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_venue_closure_notice_a1eaf4f566104cf2799e9df7412ce0130}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the notice type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_venue_closure_notice_a30eebf1620d01cf40e648b94026fdb36}{affect}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component) override
+\begin{DoxyCompactList}\small\item\em Applies the venue closure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f}{Event\+Notice}} (const std\+::string \&message, const std\+::string \&location)
+\begin{DoxyCompactList}\small\item\em Creates an event notice. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the notice message. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Returns the location associated with the notice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3}{message}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a77095d9452e8978ffeb307523ffd44c7}{location}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notice indicating that a venue has been closed. 
+
+Definition at line \mbox{\hyperlink{_venue_closure_notice_8h_source_l00009}{9}} of file \mbox{\hyperlink{_venue_closure_notice_8h_source}{Venue\+Closure\+Notice.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_venue_closure_notice_afb7b8d575e01fac749ccc7735c52a2dd}\label{class_venue_closure_notice_afb7b8d575e01fac749ccc7735c52a2dd} 
+\index{VenueClosureNotice@{VenueClosureNotice}!VenueClosureNotice@{VenueClosureNotice}}
+\index{VenueClosureNotice@{VenueClosureNotice}!VenueClosureNotice@{VenueClosureNotice}}
+\doxysubsubsection{\texorpdfstring{VenueClosureNotice()}{VenueClosureNotice()}}
+{\footnotesize\ttfamily Venue\+Closure\+Notice\+::\+Venue\+Closure\+Notice (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{location,  }\item[{const std\+::string \&}]{venue }\end{DoxyParamCaption})}
+
+
+
+Creates a venue closure notice. 
+
+Constructs a \doxylink{class_venue_closure_notice}{Venue\+Closure\+Notice}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Description of the closure. \\
+\hline
+{\em location} & Location associated with the closure. \\
+\hline
+{\em venue} & Name of the closed venue.\\
+\hline
+{\em message} & Description of the venue closure. \\
+\hline
+{\em location} & Location associated with the closure. \\
+\hline
+{\em venue} & Name of the venue that has been closed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_venue_closure_notice_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_venue_closure_notice_8cpp_source}{Venue\+Closure\+Notice.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_venue_closure_notice_a30eebf1620d01cf40e648b94026fdb36}\label{class_venue_closure_notice_a30eebf1620d01cf40e648b94026fdb36} 
+\index{VenueClosureNotice@{VenueClosureNotice}!affect@{affect}}
+\index{affect@{affect}!VenueClosureNotice@{VenueClosureNotice}}
+\doxysubsubsection{\texorpdfstring{affect()}{affect()}}
+{\footnotesize\ttfamily void Venue\+Closure\+Notice\+::affect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the venue closure. 
+
+Applies the venue closure notification.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the notice.\\
+\hline
+\end{DoxyParams}
+Delegates the response to the receiving component\textquotesingle{}s on\+Venue\+Closure() handler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the notification. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_venue_closure_notice_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{_venue_closure_notice_8cpp_source}{Venue\+Closure\+Notice.\+cpp}}.
+
+\Hypertarget{class_venue_closure_notice_a1eaf4f566104cf2799e9df7412ce0130}\label{class_venue_closure_notice_a1eaf4f566104cf2799e9df7412ce0130} 
+\index{VenueClosureNotice@{VenueClosureNotice}!getType@{getType}}
+\index{getType@{getType}!VenueClosureNotice@{VenueClosureNotice}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Venue\+Closure\+Notice\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the notice type. 
+
+Returns the notification type.
+
+\begin{DoxyReturn}{Returns}
+"{}\+Venue Closure"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_event_notice_adf73e474907ceddc5707c759391db35f}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_venue_closure_notice_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_venue_closure_notice_8cpp_source}{Venue\+Closure\+Notice.\+cpp}}.
+
+\Hypertarget{class_venue_closure_notice_a3f0e264c453c86a8e40c39d39a4b48e0}\label{class_venue_closure_notice_a3f0e264c453c86a8e40c39d39a4b48e0} 
+\index{VenueClosureNotice@{VenueClosureNotice}!getVenue@{getVenue}}
+\index{getVenue@{getVenue}!VenueClosureNotice@{VenueClosureNotice}}
+\doxysubsubsection{\texorpdfstring{getVenue()}{getVenue()}}
+{\footnotesize\ttfamily std\+::string Venue\+Closure\+Notice\+::get\+Venue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the closed venue. 
+
+Gets the affected venue.
+
+\begin{DoxyReturn}{Returns}
+Name of the closed venue. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_venue_closure_notice_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_venue_closure_notice_8cpp_source}{Venue\+Closure\+Notice.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Venue\+Closure\+Notice.\+h\item 
+src/observer/\mbox{\hyperlink{_venue_closure_notice_8cpp}{Venue\+Closure\+Notice.\+cpp}}\end{DoxyCompactItemize}

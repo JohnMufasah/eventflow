@@ -1,0 +1,245 @@
+\doxysection{Information\+Desk Class Reference}
+\hypertarget{class_information_desk}{}\label{class_information_desk}\index{InformationDesk@{InformationDesk}}
+
+
+Provides information and directions to visitors.  
+
+
+
+
+{\ttfamily \#include $<$Leaves.\+h$>$}
+
+Inheritance diagram for Information\+Desk\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_information_desk}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_information_desk_a02ed5740aef013bbfd068727bb74616c}{Information\+Desk}} (const std\+::string \&name, int capacity)
+\begin{DoxyCompactList}\small\item\em Constructs an information desk. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_information_desk_a05045ad9063e074ecca50715c3dd833d}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_information_desk_ad9c600ce413f4be6963616daa7090fc4}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_information_desk_ad585e322e67accae404f3e5c2f84451c}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the current status of the component. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_information_desk_a0c02ffc05696b3593bdb8d7ecddb6994}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the capacity associated with the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_information_desk_ac6aaa02339132bc177855ee10ce9636f}{handle\+Notice}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Handles a notification received by the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_information_desk_ac1e8cabcc0da30a6b39cb74b1efed759}{on\+Emergency\+Alert}} () override
+\begin{DoxyCompactList}\small\item\em Responds to an emergency alert. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_information_desk_a94ef6eccf145770b6e3fb0f3e1553b19}{on\+Department\+Mismatch}} (const std\+::string \&correct\+Faculty) override
+\begin{DoxyCompactList}\small\item\em Redirects a visitor to the correct faculty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_leaf}{Event\+Leaf}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_event_leaf_a5eda5d24d904b4400afbafb9adea4b2e}{\texorpdfstring{$\sim$}{\string~}\+Event\+Leaf}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_event_component_a4f93a9cbdd78da5b800a39868fc4e09c}{on\+Capacity\+Update}} (int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Updates the component\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_aec4839494e41e077a0cea87a1d1c9c47}{on\+Venue\+Closure}} ()
+\begin{DoxyCompactList}\small\item\em Handles a venue closure notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a8649a7d0f5703e55b00f2acbef1dfa81}{on\+Room\+Change}} (const std\+::string \&new\+Room)
+\begin{DoxyCompactList}\small\item\em Handles a room change notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a72044b70a5e083f682335152500cda70}{on\+Safety\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a415af28892c73148fc8f424354811c8a}{on\+Weather\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a weather alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_abdf4090503098b9451ac2fd1bfd5d8bd}{on\+Congestion}} ()
+\begin{DoxyCompactList}\small\item\em Handles an exhibition congestion notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a2fabd68692363f9338fdf6f53a8d4e64}{on\+Shuttle\+Overload}} ()
+\begin{DoxyCompactList}\small\item\em Handles a shuttle overload notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_ac7af43a3cfad36b92bf77d4c7f957002}{on\+Capacity\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a capacity alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a7718f210ff03ddaf04618459e58ec143}{on\+Allergen\+Alert}} (const std\+::string \&dietary\+Tag)
+\begin{DoxyCompactList}\small\item\em Handles an allergen or dietary alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a63967a66a104928431b085397137cd80}{on\+Safety\+Briefing\+Reminder}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety briefing reminder. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_event_component_a0b229e18d9611b8109c0a5527e6b01df}{\texorpdfstring{$\sim$}{\string~}\+Event\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides information and directions to visitors. 
+
+Definition at line \mbox{\hyperlink{_leaves_8h_source_l00346}{346}} of file \mbox{\hyperlink{_leaves_8h_source}{Leaves.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_information_desk_a02ed5740aef013bbfd068727bb74616c}\label{class_information_desk_a02ed5740aef013bbfd068727bb74616c} 
+\index{InformationDesk@{InformationDesk}!InformationDesk@{InformationDesk}}
+\index{InformationDesk@{InformationDesk}!InformationDesk@{InformationDesk}}
+\doxysubsubsection{\texorpdfstring{InformationDesk()}{InformationDesk()}}
+{\footnotesize\ttfamily Information\+Desk\+::\+Information\+Desk (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs an information desk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the information desk. \\
+\hline
+{\em capacity} & Desk capacity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00592}{592}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_information_desk_ad9c600ce413f4be6963616daa7090fc4}\label{class_information_desk_ad9c600ce413f4be6963616daa7090fc4} 
+\index{InformationDesk@{InformationDesk}!close@{close}}
+\index{close@{close}!InformationDesk@{InformationDesk}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Information\+Desk\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00608}{608}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_information_desk_a0c02ffc05696b3593bdb8d7ecddb6994}\label{class_information_desk_a0c02ffc05696b3593bdb8d7ecddb6994} 
+\index{InformationDesk@{InformationDesk}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!InformationDesk@{InformationDesk}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Information\+Desk\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the capacity associated with the component. 
+
+\begin{DoxyReturn}{Returns}
+Component capacity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00629}{629}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_information_desk_ac6aaa02339132bc177855ee10ce9636f}\label{class_information_desk_ac6aaa02339132bc177855ee10ce9636f} 
+\index{InformationDesk@{InformationDesk}!handleNotice@{handleNotice}}
+\index{handleNotice@{handleNotice}!InformationDesk@{InformationDesk}}
+\doxysubsubsection{\texorpdfstring{handleNotice()}{handleNotice()}}
+{\footnotesize\ttfamily void Information\+Desk\+::handle\+Notice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a notification received by the component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification being received. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_component_a0af75223ef19c04e1316a182b400bdc4}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00634}{634}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_information_desk_a94ef6eccf145770b6e3fb0f3e1553b19}\label{class_information_desk_a94ef6eccf145770b6e3fb0f3e1553b19} 
+\index{InformationDesk@{InformationDesk}!onDepartmentMismatch@{onDepartmentMismatch}}
+\index{onDepartmentMismatch@{onDepartmentMismatch}!InformationDesk@{InformationDesk}}
+\doxysubsubsection{\texorpdfstring{onDepartmentMismatch()}{onDepartmentMismatch()}}
+{\footnotesize\ttfamily void Information\+Desk\+::on\+Department\+Mismatch (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{correct\+Faculty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Redirects a visitor to the correct faculty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em correct\+Faculty} & Correct faculty. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_a89faa0da6eda79417910a81c1228da66}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00653}{653}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_information_desk_ac1e8cabcc0da30a6b39cb74b1efed759}\label{class_information_desk_ac1e8cabcc0da30a6b39cb74b1efed759} 
+\index{InformationDesk@{InformationDesk}!onEmergencyAlert@{onEmergencyAlert}}
+\index{onEmergencyAlert@{onEmergencyAlert}!InformationDesk@{InformationDesk}}
+\doxysubsubsection{\texorpdfstring{onEmergencyAlert()}{onEmergencyAlert()}}
+{\footnotesize\ttfamily void Information\+Desk\+::on\+Emergency\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Responds to an emergency alert. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_ad02b6a3271d3612e51bb6bb4a0015049}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00643}{643}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_information_desk_a05045ad9063e074ecca50715c3dd833d}\label{class_information_desk_a05045ad9063e074ecca50715c3dd833d} 
+\index{InformationDesk@{InformationDesk}!open@{open}}
+\index{open@{open}!InformationDesk@{InformationDesk}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Information\+Desk\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00602}{602}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_information_desk_ad585e322e67accae404f3e5c2f84451c}\label{class_information_desk_ad585e322e67accae404f3e5c2f84451c} 
+\index{InformationDesk@{InformationDesk}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!InformationDesk@{InformationDesk}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Information\+Desk\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the current status of the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00613}{613}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/composite/Leaves.\+h\item 
+src/composite/\mbox{\hyperlink{_leaves_8cpp}{Leaves.\+cpp}}\end{DoxyCompactItemize}

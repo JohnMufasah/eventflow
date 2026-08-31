@@ -1,0 +1,196 @@
+\doxysection{Capacity\+Update\+Notice Class Reference}
+\hypertarget{class_capacity_update_notice}{}\label{class_capacity_update_notice}\index{CapacityUpdateNotice@{CapacityUpdateNotice}}
+
+
+Notice indicating that an event capacity has changed.  
+
+
+
+
+{\ttfamily \#include $<$Capacity\+Update\+Notice.\+h$>$}
+
+Inheritance diagram for Capacity\+Update\+Notice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_capacity_update_notice}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_capacity_update_notice_a85410674c6834a7a4bdf9cef6ce4b750}{Capacity\+Update\+Notice}} (const std\+::string \&message, const std\+::string \&location, int old\+Capacity, int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Creates a capacity update notice. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_capacity_update_notice_ab34fbed77b03a95052fd82e227e2f7bc}{get\+Old\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Returns the previous capacity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_capacity_update_notice_a60453fd11b24fe9878ed6f1b076c5d05}{get\+New\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Returns the new capacity. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_capacity_update_notice_a3a7971cc3323a7ebb47ab3405f6a3113}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the notice type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_capacity_update_notice_abdb58b78187c9342a4f62825a99688f7}{affect}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component) override
+\begin{DoxyCompactList}\small\item\em Applies the capacity update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f}{Event\+Notice}} (const std\+::string \&message, const std\+::string \&location)
+\begin{DoxyCompactList}\small\item\em Creates an event notice. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the notice message. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Returns the location associated with the notice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3}{message}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a77095d9452e8978ffeb307523ffd44c7}{location}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notice indicating that an event capacity has changed. 
+
+Definition at line \mbox{\hyperlink{_capacity_update_notice_8h_source_l00009}{9}} of file \mbox{\hyperlink{_capacity_update_notice_8h_source}{Capacity\+Update\+Notice.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_capacity_update_notice_a85410674c6834a7a4bdf9cef6ce4b750}\label{class_capacity_update_notice_a85410674c6834a7a4bdf9cef6ce4b750} 
+\index{CapacityUpdateNotice@{CapacityUpdateNotice}!CapacityUpdateNotice@{CapacityUpdateNotice}}
+\index{CapacityUpdateNotice@{CapacityUpdateNotice}!CapacityUpdateNotice@{CapacityUpdateNotice}}
+\doxysubsubsection{\texorpdfstring{CapacityUpdateNotice()}{CapacityUpdateNotice()}}
+{\footnotesize\ttfamily Capacity\+Update\+Notice\+::\+Capacity\+Update\+Notice (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{location,  }\item[{int}]{old\+Capacity,  }\item[{int}]{new\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Creates a capacity update notice. 
+
+Constructs a \doxylink{class_capacity_update_notice}{Capacity\+Update\+Notice}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Description of the capacity change. \\
+\hline
+{\em location} & Location associated with the change. \\
+\hline
+{\em old\+Capacity} & Previous capacity. \\
+\hline
+{\em new\+Capacity} & New capacity.\\
+\hline
+{\em message} & Description of the capacity change. \\
+\hline
+{\em location} & Location associated with the change. \\
+\hline
+{\em old\+Capacity} & Previous capacity. \\
+\hline
+{\em new\+Capacity} & Updated capacity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_capacity_update_notice_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_capacity_update_notice_8cpp_source}{Capacity\+Update\+Notice.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_capacity_update_notice_abdb58b78187c9342a4f62825a99688f7}\label{class_capacity_update_notice_abdb58b78187c9342a4f62825a99688f7} 
+\index{CapacityUpdateNotice@{CapacityUpdateNotice}!affect@{affect}}
+\index{affect@{affect}!CapacityUpdateNotice@{CapacityUpdateNotice}}
+\doxysubsubsection{\texorpdfstring{affect()}{affect()}}
+{\footnotesize\ttfamily void Capacity\+Update\+Notice\+::affect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the capacity update. 
+
+Applies the capacity update notification.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the notice.\\
+\hline
+\end{DoxyParams}
+Delegates the response to the receiving component\textquotesingle{}s on\+Capacity\+Update() handler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the notification. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_capacity_update_notice_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{_capacity_update_notice_8cpp_source}{Capacity\+Update\+Notice.\+cpp}}.
+
+\Hypertarget{class_capacity_update_notice_a60453fd11b24fe9878ed6f1b076c5d05}\label{class_capacity_update_notice_a60453fd11b24fe9878ed6f1b076c5d05} 
+\index{CapacityUpdateNotice@{CapacityUpdateNotice}!getNewCapacity@{getNewCapacity}}
+\index{getNewCapacity@{getNewCapacity}!CapacityUpdateNotice@{CapacityUpdateNotice}}
+\doxysubsubsection{\texorpdfstring{getNewCapacity()}{getNewCapacity()}}
+{\footnotesize\ttfamily int Capacity\+Update\+Notice\+::get\+New\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the new capacity. 
+
+Gets the updated capacity.
+
+\begin{DoxyReturn}{Returns}
+New capacity value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_capacity_update_notice_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{_capacity_update_notice_8cpp_source}{Capacity\+Update\+Notice.\+cpp}}.
+
+\Hypertarget{class_capacity_update_notice_ab34fbed77b03a95052fd82e227e2f7bc}\label{class_capacity_update_notice_ab34fbed77b03a95052fd82e227e2f7bc} 
+\index{CapacityUpdateNotice@{CapacityUpdateNotice}!getOldCapacity@{getOldCapacity}}
+\index{getOldCapacity@{getOldCapacity}!CapacityUpdateNotice@{CapacityUpdateNotice}}
+\doxysubsubsection{\texorpdfstring{getOldCapacity()}{getOldCapacity()}}
+{\footnotesize\ttfamily int Capacity\+Update\+Notice\+::get\+Old\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the previous capacity. 
+
+Gets the previous capacity.
+
+\begin{DoxyReturn}{Returns}
+Previous capacity value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_capacity_update_notice_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_capacity_update_notice_8cpp_source}{Capacity\+Update\+Notice.\+cpp}}.
+
+\Hypertarget{class_capacity_update_notice_a3a7971cc3323a7ebb47ab3405f6a3113}\label{class_capacity_update_notice_a3a7971cc3323a7ebb47ab3405f6a3113} 
+\index{CapacityUpdateNotice@{CapacityUpdateNotice}!getType@{getType}}
+\index{getType@{getType}!CapacityUpdateNotice@{CapacityUpdateNotice}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Capacity\+Update\+Notice\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the notice type. 
+
+Returns the notification type.
+
+\begin{DoxyReturn}{Returns}
+"{}\+Capacity Update"{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_event_notice_adf73e474907ceddc5707c759391db35f}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_capacity_update_notice_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{_capacity_update_notice_8cpp_source}{Capacity\+Update\+Notice.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Capacity\+Update\+Notice.\+h\item 
+src/observer/\mbox{\hyperlink{_capacity_update_notice_8cpp}{Capacity\+Update\+Notice.\+cpp}}\end{DoxyCompactItemize}

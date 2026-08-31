@@ -1,0 +1,116 @@
+\doxysection{Event\+Control Class Reference}
+\hypertarget{class_event_control}{}\label{class_event_control}\index{EventControl@{EventControl}}
+
+
+\doxylink{class_subject}{Subject} responsible for sending Event\+Flow notifications.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Control.\+h$>$}
+
+Inheritance diagram for Event\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_event_control}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_event_control_a3b750b586a6c04f94a46f6a657c69e12}{attach}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em Registers an observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_control_a082ba83cbdc80ff220232967103db5b7}{detach}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer) override
+\begin{DoxyCompactList}\small\item\em Removes an observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_control_a3f1de9c787f6071867832964938907f2}{notify}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Sends a notice to all registered observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_subject}{Subject} responsible for sending Event\+Flow notifications. 
+
+Definition at line \mbox{\hyperlink{_event_control_8h_source_l00014}{14}} of file \mbox{\hyperlink{_event_control_8h_source}{Event\+Control.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_control_a3b750b586a6c04f94a46f6a657c69e12}\label{class_event_control_a3b750b586a6c04f94a46f6a657c69e12} 
+\index{EventControl@{EventControl}!attach@{attach}}
+\index{attach@{attach}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Event\+Control\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Registers an observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & \doxylink{class_observer}{Observer} to attach. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_subject_ab6d78de2ea944a23dc5a66a4fe580db2}{Subject}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_control_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_event_control_8cpp_source}{Event\+Control.\+cpp}}.
+
+\Hypertarget{class_event_control_a082ba83cbdc80ff220232967103db5b7}\label{class_event_control_a082ba83cbdc80ff220232967103db5b7} 
+\index{EventControl@{EventControl}!detach@{detach}}
+\index{detach@{detach}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Event\+Control\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes an observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & \doxylink{class_observer}{Observer} to detach. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_subject_a7e81018a886792735ab3d067feeb075d}{Subject}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_control_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_event_control_8cpp_source}{Event\+Control.\+cpp}}.
+
+\Hypertarget{class_event_control_a3f1de9c787f6071867832964938907f2}\label{class_event_control_a3f1de9c787f6071867832964938907f2} 
+\index{EventControl@{EventControl}!notify@{notify}}
+\index{notify@{notify}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Event\+Control\+::notify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sends a notice to all registered observers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notice to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_subject_aeb9b41d7a80e5179d83f44169ffaea51}{Subject}}.
+
+
+
+Definition at line \mbox{\hyperlink{_event_control_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{_event_control_8cpp_source}{Event\+Control.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Event\+Control.\+h\item 
+src/observer/\mbox{\hyperlink{_event_control_8cpp}{Event\+Control.\+cpp}}\end{DoxyCompactItemize}

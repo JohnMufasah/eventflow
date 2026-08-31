@@ -1,8 +1,3 @@
-/**
- * @file EventNotificationHandler.h
- * @brief Defines the ConcreteObserver for the EventFlow notification system.
- */
-
 #ifndef EVENTNOTIFICATIONHANDLER_H
 #define EVENTNOTIFICATIONHANDLER_H
 
@@ -12,46 +7,39 @@ class EventNotice;
 class EventComponent;
 
 /**
- * @class EventNotificationHandler
- * @brief Concrete Observer that processes EventFlow notifications.
- *
- * EventNotificationHandler receives EventNotice objects pushed by
- * EventControl and forwards them to its target EventComponent.
- *
- * The target is responsible for handling the notification within
- * the Composite structure.
+ * @brief Observer that forwards notices to an EventComponent.
  */
 class EventNotificationHandler : public Observer
 {
 private:
-
-    /// EventComponent affected by the notification.
     EventComponent* target;
 
 public:
-
     /**
-     * @brief Constructs an EventNotificationHandler.
+     * @brief Creates a notification handler.
      *
-     * @param target EventComponent that should receive the notification.
+     * @param target Component that receives forwarded notices.
      */
-    EventNotificationHandler(EventComponent* target);
+    explicit EventNotificationHandler(EventComponent* target);
 
     /**
-     * @brief Processes a pushed EventNotice.
+     * @brief Receives a pushed EventNotice.
      *
-     * The notice is forwarded to the target EventComponent.
-     *
-     * @param notice EventNotice received from the Subject.
+     * @param notice Notice being received.
      */
     void update(EventNotice* notice) override;
 
     /**
-     * @brief Gets the target EventComponent.
-     *
-     * @return Pointer to the target EventComponent.
+     * @brief Returns the current target.
      */
     EventComponent* getTarget() const;
+
+    /**
+     * @brief Changes the target component.
+     *
+     * @param newTarget New component to receive notices.
+     */
+    void setTarget(EventComponent* newTarget);
 };
 
 #endif

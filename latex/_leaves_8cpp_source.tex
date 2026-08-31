@@ -1,0 +1,662 @@
+\doxysection{Leaves.\+cpp}
+\hypertarget{_leaves_8cpp_source}{}\label{_leaves_8cpp_source}\index{src/composite/Leaves.cpp@{src/composite/Leaves.cpp}}
+\mbox{\hyperlink{_leaves_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}Leaves.h"{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}../observer/EventNotice.h"{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00011}\mbox{\hyperlink{class_safety_briefing_a73b4073773bd89a543d5d0c1962e8c4d}{00011}}\ \mbox{\hyperlink{class_safety_briefing_a73b4073773bd89a543d5d0c1962e8c4d}{SafetyBriefing::SafetyBriefing}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{int}\ cap)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00014}00014\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00015}00015\ \ \ \ \ \ \ capacity(cap),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00016}00016\ \ \ \ \ \ \ extended(false)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00020}\mbox{\hyperlink{class_safety_briefing_a0d985cb3505ccf99cbebf112b284a647}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a0d985cb3505ccf99cbebf112b284a647}{SafetyBriefing::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00022}00022\ \ \ \ \ extended\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00025}\mbox{\hyperlink{class_safety_briefing_a7344ab880c1933666d6d4b6dc871c0cd}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a7344ab880c1933666d6d4b6dc871c0cd}{SafetyBriefing::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00029}\mbox{\hyperlink{class_safety_briefing_a07850232c6cc83c8b21190c8f505e04b}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a07850232c6cc83c8b21190c8f505e04b}{SafetyBriefing::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00030}00030\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00031}00031\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Safety\ Briefing]\ -\/\ capacity\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (extended\ ?\ \textcolor{stringliteral}{"{},\ session\ extended"{}}\ :\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00038}\mbox{\hyperlink{class_safety_briefing_af1bfea67a67ede7f659b47a324de3ef4}{00038}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_safety_briefing_af1bfea67a67ede7f659b47a324de3ef4}{SafetyBriefing::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00039}00039\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{return}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00043}\mbox{\hyperlink{class_safety_briefing_a2ef651eb6087c29f37e6884f506356b9}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a2ef651eb6087c29f37e6884f506356b9}{SafetyBriefing::handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00051}\mbox{\hyperlink{class_safety_briefing_a0f1768e9a6162cf84b9fa86a3e44baf6}{00051}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a0f1768e9a6162cf84b9fa86a3e44baf6}{SafetyBriefing::onSafetyAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00052}00052\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00053}00053\ \ \ \ \ extended\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00055}00055\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ extends\ the\ session\ to\ cover\ the\ new\ alert.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00059}\mbox{\hyperlink{class_safety_briefing_a65fb34676e1aa01baac8535941a108eb}{00059}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a65fb34676e1aa01baac8535941a108eb}{SafetyBriefing::onCapacityUpdate}}(\textcolor{keywordtype}{int}\ newCapacity)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00061}00061\ \ \ \ \ capacity\ =\ newCapacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00063}00063\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ adjusts\ attendee\ limit\ to\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00069}\mbox{\hyperlink{class_safety_briefing_a8843b49a923bcbecec75cad4f83e5cde}{00069}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_safety_briefing_a8843b49a923bcbecec75cad4f83e5cde}{SafetyBriefing::onSafetyBriefingReminder}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00070}00070\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00071}00071\ \ \ \ \ extended\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00073}00073\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ reminder\ triggered\ for\ laboratory\ capacity.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00077}\mbox{\hyperlink{class_laboratory_demonstration_a376bb4047a47d6ba27f54ea34f7c18f6}{00077}}\ \mbox{\hyperlink{class_laboratory_demonstration_a376bb4047a47d6ba27f54ea34f7c18f6}{LaboratoryDemonstration::LaboratoryDemonstration}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{int}\ cap)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00080}00080\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00081}00081\ \ \ \ \ \ \ capacity(cap),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00082}00082\ \ \ \ \ \ \ experimentRunning(false),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00083}00083\ \ \ \ \ \ \ equipmentLocked(false)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00084}00084\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00085}00085\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00087}\mbox{\hyperlink{class_laboratory_demonstration_aad5a2a87cd70c3afa3f243b9bf0d36e4}{00087}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_aad5a2a87cd70c3afa3f243b9bf0d36e4}{LaboratoryDemonstration::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00088}00088\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00089}00089\ \ \ \ \ experimentRunning\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00090}00090\ \ \ \ \ equipmentLocked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00091}00091\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00093}\mbox{\hyperlink{class_laboratory_demonstration_ab8e61bcb642d624bb3d4be376ac0afc1}{00093}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_ab8e61bcb642d624bb3d4be376ac0afc1}{LaboratoryDemonstration::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00094}00094\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00095}00095\ \ \ \ \ experimentRunning\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00096}00096\ \ \ \ \ equipmentLocked\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00099}\mbox{\hyperlink{class_laboratory_demonstration_a6dd55166cc538df404a6420941fbbc59}{00099}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_a6dd55166cc538df404a6420941fbbc59}{LaboratoryDemonstration::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00100}00100\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00101}00101\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Laboratory\ Demonstration]\ -\/\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (experimentRunning}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \textcolor{stringliteral}{"{}experiment\ running"{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}experiment\ halted"{}})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (equipmentLocked}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \textcolor{stringliteral}{"{}equipment\ locked"{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}equipment\ unlocked"{}})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ capacity\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00113}00113\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00115}\mbox{\hyperlink{class_laboratory_demonstration_a8201c159b75456c5944697cbe62487f8}{00115}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_laboratory_demonstration_a8201c159b75456c5944697cbe62487f8}{LaboratoryDemonstration::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00116}00116\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordflow}{return}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00118}00118\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00120}\mbox{\hyperlink{class_laboratory_demonstration_a86a89a738fd6168b9096ddc5145f3e60}{00120}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_a86a89a738fd6168b9096ddc5145f3e60}{LaboratoryDemonstration::handleNotice}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00121}00121\ \ \ \ \ \mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00122}00122\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00124}00124\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00127}00127\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00129}\mbox{\hyperlink{class_laboratory_demonstration_ac2d0156059987a90b18419f46ed0666f}{00129}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_ac2d0156059987a90b18419f46ed0666f}{LaboratoryDemonstration::onEmergencyAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00130}00130\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00131}00131\ \ \ \ \ experimentRunning\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00132}00132\ \ \ \ \ equipmentLocked\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00134}00134\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ halts\ the\ experiment\ and\ locks\ down\ equipment.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00136}00136\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00138}\mbox{\hyperlink{class_laboratory_demonstration_a19fddbf2ea0e5721d2b86ef607851d34}{00138}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_laboratory_demonstration_a19fddbf2ea0e5721d2b86ef607851d34}{LaboratoryDemonstration::onCapacityAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00139}00139\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00140}00140\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ has\ reached\ capacity.\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}SafetyBriefing\ reminder\ triggered.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00145}\mbox{\hyperlink{class_food_vendor_a2522f990e3e3b7a1acda3f5b7d2fc277}{00145}}\ \mbox{\hyperlink{class_food_vendor_a2522f990e3e3b7a1acda3f5b7d2fc277}{FoodVendor::FoodVendor}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00146}00146\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00147}00147\ \ \ \ \ \textcolor{keywordtype}{int}\ cap,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00148}00148\ \ \ \ \ \textcolor{keyword}{const}\ std::set<std::string>\&\ options)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00149}00149\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00150}00150\ \ \ \ \ \ \ capacity(cap),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00151}00151\ \ \ \ \ \ \ serving(true),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00152}00152\ \ \ \ \ \ \ dietaryOptions(options)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00153}00153\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00154}00154\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00156}\mbox{\hyperlink{class_food_vendor_aa95e925eb3f883220d1c4e98eb3e7ca7}{00156}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_aa95e925eb3f883220d1c4e98eb3e7ca7}{FoodVendor::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00157}00157\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00158}00158\ \ \ \ \ serving\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00159}00159\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00161}\mbox{\hyperlink{class_food_vendor_add732a1245a621ed26eeab78f047a91b}{00161}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_add732a1245a621ed26eeab78f047a91b}{FoodVendor::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00162}00162\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00163}00163\ \ \ \ \ serving\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00164}00164\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00166}\mbox{\hyperlink{class_food_vendor_a10c06ccf493cb054c3de65fda16c193f}{00166}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a10c06ccf493cb054c3de65fda16c193f}{FoodVendor::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00167}00167\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00168}00168\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Food\ Vendor]\ -\/\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (serving\ ?\ \textcolor{stringliteral}{"{}serving"{}}\ :\ \textcolor{stringliteral}{"{}closed"{}})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ capacity\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00174}00174\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00176}\mbox{\hyperlink{class_food_vendor_aff5a5fc134b9e2b9b1c743cf76c7df5e}{00176}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_food_vendor_aff5a5fc134b9e2b9b1c743cf76c7df5e}{FoodVendor::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00177}00177\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00178}00178\ \ \ \ \ \textcolor{keywordflow}{return}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00179}00179\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00181}\mbox{\hyperlink{class_food_vendor_aa760d306bdf03fec4bab14051d423960}{00181}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_aa760d306bdf03fec4bab14051d423960}{FoodVendor::handleNotice}}(\mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00182}00182\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00183}00183\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00184}00184\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00186}00186\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00187}00187\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00189}\mbox{\hyperlink{class_food_vendor_a107bc4c11f0234e0b2caa511b1823349}{00189}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a107bc4c11f0234e0b2caa511b1823349}{FoodVendor::onVenueClosure}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00190}00190\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00191}00191\ \ \ \ \ serving\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00193}00193\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ stops\ serving\ -\/\ venue\ closed.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00195}00195\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00197}\mbox{\hyperlink{class_food_vendor_a24a15f79273c3876cd0424ad737f0e30}{00197}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a24a15f79273c3876cd0424ad737f0e30}{FoodVendor::onWeatherAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00198}00198\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00199}00199\ \ \ \ \ serving\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00201}00201\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ closes\ the\ stall\ due\ to\ weather.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00203}00203\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00205}\mbox{\hyperlink{class_food_vendor_a181c9bd25989f2c2328708f9d8acb567}{00205}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a181c9bd25989f2c2328708f9d8acb567}{FoodVendor::onEmergencyAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00206}00206\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00207}00207\ \ \ \ \ serving\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00209}00209\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ closes\ the\ stall\ and\ halts\ transactions.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00211}00211\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00213}\mbox{\hyperlink{class_food_vendor_a1fa70fc56118ca01f23e8f2487939728}{00213}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_vendor_a1fa70fc56118ca01f23e8f2487939728}{FoodVendor::onAllergenAlert}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00214}00214\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ dietaryTag)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00215}00215\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00216}00216\ \ \ \ \ \textcolor{keywordflow}{if}\ (dietaryOptions.find(dietaryTag)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ !=\ dietaryOptions.end())}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00218}00218\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ reacts\ to\ the\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ dietaryTag}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ allergen\ alert.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ serving\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00225}00225\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00226}00226\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00228}\mbox{\hyperlink{class_course_presentation_aef8144fc79a702d9dccfc4c6a0ed731a}{00228}}\ \mbox{\hyperlink{class_course_presentation_aef8144fc79a702d9dccfc4c6a0ed731a}{CoursePresentation::CoursePresentation}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00229}00229\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00230}00230\ \ \ \ \ \textcolor{keywordtype}{int}\ cap,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00231}00231\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ room)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00232}00232\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00233}00233\ \ \ \ \ \ \ capacity(cap),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00234}00234\ \ \ \ \ \ \ currentRoom(room)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00235}00235\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00236}00236\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00238}\mbox{\hyperlink{class_course_presentation_a2663a49f66fc07ef431762b5bedadebf}{00238}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_a2663a49f66fc07ef431762b5bedadebf}{CoursePresentation::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00239}00239\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00240}00240\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00242}\mbox{\hyperlink{class_course_presentation_a982310796ea2e42c336bacbd77dbe5cf}{00242}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_a982310796ea2e42c336bacbd77dbe5cf}{CoursePresentation::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00243}00243\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00244}00244\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00246}\mbox{\hyperlink{class_course_presentation_a3746c535024b1ab17046ba5f55e79836}{00246}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_a3746c535024b1ab17046ba5f55e79836}{CoursePresentation::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00247}00247\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00248}00248\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Course\ Presentation]\ -\/\ room\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ currentRoom}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ capacity\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00254}00254\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00256}\mbox{\hyperlink{class_course_presentation_a7b218bc6e20b685d0b61aea5110e3276}{00256}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_course_presentation_a7b218bc6e20b685d0b61aea5110e3276}{CoursePresentation::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00257}00257\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00258}00258\ \ \ \ \ \textcolor{keywordflow}{return}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00259}00259\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00261}\mbox{\hyperlink{class_course_presentation_a2ae7fdeb671036717e4e7197969fc488}{00261}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_a2ae7fdeb671036717e4e7197969fc488}{CoursePresentation::handleNotice}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00262}00262\ \ \ \ \ \mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00263}00263\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00264}00264\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00265}00265\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00266}00266\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00267}00267\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00268}00268\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00270}\mbox{\hyperlink{class_course_presentation_abcc1c59e7988dd6b63bed206634367c2}{00270}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_abcc1c59e7988dd6b63bed206634367c2}{CoursePresentation::onRoomChange}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00271}00271\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ newRoom)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00272}00272\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00273}00273\ \ \ \ \ currentRoom\ =\ newRoom;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00275}00275\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ relocates\ to\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ currentRoom}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00279}00279\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00281}\mbox{\hyperlink{class_course_presentation_aedec03e9ca3869c4e92aadfabcd60e22}{00281}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_presentation_aedec03e9ca3869c4e92aadfabcd60e22}{CoursePresentation::onCapacityUpdate}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00282}00282\ \ \ \ \ \textcolor{keywordtype}{int}\ newCapacity)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00283}00283\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00284}00284\ \ \ \ \ capacity\ =\ newCapacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00286}00286\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ adjusts\ seating\ to\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00290}00290\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00292}\mbox{\hyperlink{class_transport_coordinator_a86d1f5a0d7f722402fccf176c3321050}{00292}}\ \mbox{\hyperlink{class_transport_coordinator_a86d1f5a0d7f722402fccf176c3321050}{TransportCoordinator::TransportCoordinator}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00293}00293\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00294}00294\ \ \ \ \ \textcolor{keywordtype}{int}\ initial)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00295}00295\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00296}00296\ \ \ \ \ \ \ shuttlesDeployed(initial)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00297}00297\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00298}00298\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00300}\mbox{\hyperlink{class_transport_coordinator_a267e7883aa94bb86c97c937c10cabc02}{00300}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a267e7883aa94bb86c97c937c10cabc02}{TransportCoordinator::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00301}00301\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00302}00302\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00304}\mbox{\hyperlink{class_transport_coordinator_aa08e43f3eb072d14d117b7dcc30bb097}{00304}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_aa08e43f3eb072d14d117b7dcc30bb097}{TransportCoordinator::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00305}00305\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00306}00306\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00308}\mbox{\hyperlink{class_transport_coordinator_a74aeb5e8b7bc0b85282bf3c591c695bb}{00308}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a74aeb5e8b7bc0b85282bf3c591c695bb}{TransportCoordinator::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00309}00309\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00310}00310\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Transport\ Coordinator]\ -\/\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ shuttlesDeployed}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ shuttles\ deployed\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00314}00314\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00315}00315\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00316}\mbox{\hyperlink{class_transport_coordinator_a926bb97a69f825b6b0be4f5f3424f870}{00316}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_transport_coordinator_a926bb97a69f825b6b0be4f5f3424f870}{TransportCoordinator::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00317}00317\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00318}00318\ \ \ \ \ \textcolor{keywordflow}{return}\ shuttlesDeployed;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00319}00319\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00321}\mbox{\hyperlink{class_transport_coordinator_a55659617c36d29e3df2bec0d0b94a1f3}{00321}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a55659617c36d29e3df2bec0d0b94a1f3}{TransportCoordinator::handleNotice}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00322}00322\ \ \ \ \ \mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00323}00323\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00324}00324\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00325}00325\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00326}00326\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00327}00327\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00328}00328\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00330}\mbox{\hyperlink{class_transport_coordinator_a38d70f36dde36d69ebf0e99bfb6069a8}{00330}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a38d70f36dde36d69ebf0e99bfb6069a8}{TransportCoordinator::onShuttleOverload}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00331}00331\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00332}00332\ \ \ \ \ shuttlesDeployed\ +=\ 2;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00334}00334\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ deploys\ 2\ more\ shuttles\ -\/\ now\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ shuttlesDeployed}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00338}00338\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00339}00339\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00340}\mbox{\hyperlink{class_transport_coordinator_a29638e0da547638985bad449af2e7f90}{00340}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transport_coordinator_a29638e0da547638985bad449af2e7f90}{TransportCoordinator::onWeatherAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00341}00341\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00342}00342\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ adjusts\ routes\ for\ weather\ conditions.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00344}00344\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00346}\mbox{\hyperlink{class_registration_desk_a867cf2881c12adeecc35a52a1bfb35c2}{00346}}\ \mbox{\hyperlink{class_registration_desk_a867cf2881c12adeecc35a52a1bfb35c2}{RegistrationDesk::RegistrationDesk}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00347}00347\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00348}00348\ \ \ \ \ \textcolor{keywordtype}{int}\ cap,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00349}00349\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ room)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00350}00350\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00351}00351\ \ \ \ \ \ \ capacity(cap),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00352}00352\ \ \ \ \ \ \ currentRoom(room),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00353}00353\ \ \ \ \ \ \ isOpen(true)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00354}00354\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00355}00355\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00356}00356\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00357}\mbox{\hyperlink{class_registration_desk_a2a8687281da5768cd5c9cd483933833d}{00357}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a2a8687281da5768cd5c9cd483933833d}{RegistrationDesk::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00358}00358\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00359}00359\ \ \ \ \ isOpen\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00360}00360\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00361}00361\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00362}\mbox{\hyperlink{class_registration_desk_a2244f5b55291e2e476fd2c7471ef9dea}{00362}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a2244f5b55291e2e476fd2c7471ef9dea}{RegistrationDesk::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00363}00363\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00364}00364\ \ \ \ \ isOpen\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00365}00365\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00366}00366\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00367}\mbox{\hyperlink{class_registration_desk_a37e3b2547d9ad2f23cff5e93dc07ce42}{00367}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a37e3b2547d9ad2f23cff5e93dc07ce42}{RegistrationDesk::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00368}00368\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00369}00369\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Registration]\ -\/\ room\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ currentRoom}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (isOpen\ ?\ \textcolor{stringliteral}{"{}open"{}}\ :\ \textcolor{stringliteral}{"{}closed"{}})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ capacity\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00377}00377\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00378}00378\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00379}\mbox{\hyperlink{class_registration_desk_a7359d48378096c47d0c78210e35f7103}{00379}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_registration_desk_a7359d48378096c47d0c78210e35f7103}{RegistrationDesk::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00380}00380\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00381}00381\ \ \ \ \ \textcolor{keywordflow}{return}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00382}00382\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00383}00383\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00384}\mbox{\hyperlink{class_registration_desk_a8e48707c319ef3b0c37a9827f8998fb4}{00384}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a8e48707c319ef3b0c37a9827f8998fb4}{RegistrationDesk::handleNotice}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00385}00385\ \ \ \ \ \mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00386}00386\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00387}00387\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00388}00388\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00389}00389\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00390}00390\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00391}00391\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00392}00392\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00393}\mbox{\hyperlink{class_registration_desk_a95e39b4bfe5342db967a37e918021539}{00393}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a95e39b4bfe5342db967a37e918021539}{RegistrationDesk::onVenueClosure}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00394}00394\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00395}00395\ \ \ \ \ isOpen\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00396}00396\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00397}00397\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ stops\ accepting\ registrations\ -\/\ venue\ closed.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00399}00399\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00400}00400\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00401}\mbox{\hyperlink{class_registration_desk_a74ca8068c574712a722c2ab626234806}{00401}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_registration_desk_a74ca8068c574712a722c2ab626234806}{RegistrationDesk::onRoomChange}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00402}00402\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ newRoom)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00403}00403\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00404}00404\ \ \ \ \ currentRoom\ =\ newRoom;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00405}00405\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00406}00406\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ updates\ its\ displayed\ room\ to\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ currentRoom}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00410}00410\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00411}00411\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00412}\mbox{\hyperlink{class_shuttle_stop_a7e37018074d17443bd55c8fbf1c09722}{00412}}\ \mbox{\hyperlink{class_shuttle_stop_a7e37018074d17443bd55c8fbf1c09722}{ShuttleStop::ShuttleStop}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00413}00413\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00414}00414\ \ \ \ \ \textcolor{keywordtype}{int}\ cap)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00415}00415\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00416}00416\ \ \ \ \ \ \ capacity(cap),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00417}00417\ \ \ \ \ \ \ suspended(false),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00418}00418\ \ \ \ \ \ \ departuresOnly(false)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00419}00419\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00420}00420\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00421}00421\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00422}\mbox{\hyperlink{class_shuttle_stop_a5e2340d54c13dd5aac0090854fa1b901}{00422}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_a5e2340d54c13dd5aac0090854fa1b901}{ShuttleStop::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00423}00423\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00424}00424\ \ \ \ \ suspended\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00425}00425\ \ \ \ \ departuresOnly\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00426}00426\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00427}00427\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00428}\mbox{\hyperlink{class_shuttle_stop_aa898299459a53d48e56f4f7afe99cd24}{00428}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_aa898299459a53d48e56f4f7afe99cd24}{ShuttleStop::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00429}00429\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00430}00430\ \ \ \ \ suspended\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00431}00431\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00432}00432\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00433}\mbox{\hyperlink{class_shuttle_stop_a56c7e43539b266a8040f7f398cb35e86}{00433}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_a56c7e43539b266a8040f7f398cb35e86}{ShuttleStop::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00434}00434\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00435}00435\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00436}00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Shuttle\ Stop]\ -\/\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00437}00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (suspended\ ?\ \textcolor{stringliteral}{"{}SUSPENDED"{}}\ :\ \textcolor{stringliteral}{"{}running"{}});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00438}00438\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00439}00439\ \ \ \ \ \textcolor{keywordflow}{if}\ (departuresOnly)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00440}00440\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00441}00441\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ departures\ only"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00442}00442\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00443}00443\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00444}00444\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ capacity\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00445}00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00447}00447\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00448}00448\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00449}\mbox{\hyperlink{class_shuttle_stop_a7127217f318cc596254d14a702b8d2bc}{00449}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_shuttle_stop_a7127217f318cc596254d14a702b8d2bc}{ShuttleStop::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00450}00450\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00451}00451\ \ \ \ \ \textcolor{keywordflow}{return}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00452}00452\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00453}00453\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00454}\mbox{\hyperlink{class_shuttle_stop_aeb0f3e99b80c9ded1ea3876e139e3eb9}{00454}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_aeb0f3e99b80c9ded1ea3876e139e3eb9}{ShuttleStop::handleNotice}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00455}00455\ \ \ \ \ \mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00456}00456\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00457}00457\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00458}00458\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00459}00459\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00460}00460\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00461}00461\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00462}00462\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00463}\mbox{\hyperlink{class_shuttle_stop_ae388a72cdd0a978619656f710ad506da}{00463}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_ae388a72cdd0a978619656f710ad506da}{ShuttleStop::onShuttleOverload}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00464}00464\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00465}00465\ \ \ \ \ capacity\ +=\ 10;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00466}00466\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00467}00467\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00468}00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ adds\ an\ extra\ shuttle\ -\/\ capacity\ now\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00469}00469\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00470}00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00471}00471\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00472}00472\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00473}\mbox{\hyperlink{class_shuttle_stop_aafb9b0bdd726671a2eb2380a8187fc55}{00473}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_aafb9b0bdd726671a2eb2380a8187fc55}{ShuttleStop::onWeatherAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00474}00474\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00475}00475\ \ \ \ \ suspended\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00476}00476\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00477}00477\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00478}00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ suspends\ service\ due\ to\ weather.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00479}00479\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00481}\mbox{\hyperlink{class_shuttle_stop_ab7597ab5dc80011ef7fc04e878f8ce30}{00481}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shuttle_stop_ab7597ab5dc80011ef7fc04e878f8ce30}{ShuttleStop::onEmergencyAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00482}00482\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00483}00483\ \ \ \ \ suspended\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00484}00484\ \ \ \ \ departuresOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00485}00485\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00486}00486\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00487}00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ suspends\ drop-\/offs\ and\ allows\ departures\ only.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00488}00488\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00490}\mbox{\hyperlink{class_student_guide_a3242f15301b71793c506812bac197fe8}{00490}}\ \mbox{\hyperlink{class_student_guide_a3242f15301b71793c506812bac197fe8}{StudentGuide::StudentGuide}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00491}00491\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00492}00492\ \ \ \ \ \textcolor{keywordtype}{int}\ size)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00493}00493\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00494}00494\ \ \ \ \ \ \ groupSize(size),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00495}00495\ \ \ \ \ \ \ redirecting(false),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00496}00496\ \ \ \ \ \ \ evacuationMode(false)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00497}00497\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00498}00498\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00499}00499\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00500}\mbox{\hyperlink{class_student_guide_a7c4278df81094d9d2175f951e2b371bc}{00500}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a7c4278df81094d9d2175f951e2b371bc}{StudentGuide::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00501}00501\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00502}00502\ \ \ \ \ redirecting\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00503}00503\ \ \ \ \ evacuationMode\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00504}00504\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00505}00505\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00506}\mbox{\hyperlink{class_student_guide_a00168df3b63227e2dc17104d0c6ce9cd}{00506}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a00168df3b63227e2dc17104d0c6ce9cd}{StudentGuide::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00507}00507\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00508}00508\ \ \ \ \ redirecting\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00509}00509\ \ \ \ \ evacuationMode\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00510}00510\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00511}00511\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00512}\mbox{\hyperlink{class_student_guide_a16f909ada5206d880569e5e3326d07e7}{00512}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a16f909ada5206d880569e5e3326d07e7}{StudentGuide::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00513}00513\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00514}00514\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00515}00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Student\ Guide]\ -\/\ group\ of\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ groupSize;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00517}00517\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00518}00518\ \ \ \ \ \textcolor{keywordflow}{if}\ (evacuationMode)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00519}00519\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00520}00520\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ EVACUATION\ MODE"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00521}00521\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00522}00522\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (redirecting)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00523}00523\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00524}00524\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ currently\ redirecting\ visitors"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00525}00525\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00526}00526\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00527}00527\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00528}00528\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00529}00529\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00530}\mbox{\hyperlink{class_student_guide_a1a440c5d92a0f12c9cd79d69ba4d4c1d}{00530}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_student_guide_a1a440c5d92a0f12c9cd79d69ba4d4c1d}{StudentGuide::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00531}00531\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00532}00532\ \ \ \ \ \textcolor{keywordflow}{return}\ groupSize;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00533}00533\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00534}00534\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00535}\mbox{\hyperlink{class_student_guide_a704ee84c703333ae2fe5a55f2c5dce16}{00535}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a704ee84c703333ae2fe5a55f2c5dce16}{StudentGuide::handleNotice}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00536}00536\ \ \ \ \ \mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00537}00537\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00538}00538\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00539}00539\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00540}00540\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00541}00541\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00542}00542\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00543}00543\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00544}\mbox{\hyperlink{class_student_guide_adfe6d79b34d7c795e6298b6eacdd16aa}{00544}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_adfe6d79b34d7c795e6298b6eacdd16aa}{StudentGuide::onSafetyAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00545}00545\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00546}00546\ \ \ \ \ redirecting\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00547}00547\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00548}00548\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00549}00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ redirects\ visitors\ away\ from\ the\ area.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00550}00550\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00551}00551\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00552}\mbox{\hyperlink{class_student_guide_aed2fa3162772d44de18512d818d9939a}{00552}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_aed2fa3162772d44de18512d818d9939a}{StudentGuide::onCongestion}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00553}00553\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00554}00554\ \ \ \ \ redirecting\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00555}00555\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00556}00556\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00557}00557\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ reroutes\ the\ group\ to\ a\ less\ congested\ area.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00558}00558\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00559}00559\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00560}\mbox{\hyperlink{class_student_guide_abb8783f8e414e93447f53996e58ccb93}{00560}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_abb8783f8e414e93447f53996e58ccb93}{StudentGuide::onEmergencyAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00561}00561\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00562}00562\ \ \ \ \ evacuationMode\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00563}00563\ \ \ \ \ redirecting\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00564}00564\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00565}00565\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00566}00566\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ switches\ to\ evacuation\ mode\ and\ redirects\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00567}00567\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}visitors\ to\ the\ nearest\ exit.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00568}00568\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00569}00569\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00570}\mbox{\hyperlink{class_student_guide_ad1341c4f297875baf9a5ce9c84de25b6}{00570}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_ad1341c4f297875baf9a5ce9c84de25b6}{StudentGuide::onRoomChange}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00571}00571\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ newRoom)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00572}00572\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00573}00573\ \ \ \ \ redirecting\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00574}00574\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00575}00575\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00576}00576\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ redirects\ visitors\ to\ the\ new\ presentation\ room:\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00577}00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ newRoom}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00578}00578\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00579}00579\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00580}00580\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00581}\mbox{\hyperlink{class_student_guide_a3079026c24136a49ebb25360065d392c}{00581}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_guide_a3079026c24136a49ebb25360065d392c}{StudentGuide::onDepartmentMismatch}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00582}00582\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ correctFaculty)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00583}00583\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00584}00584\ \ \ \ \ redirecting\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00585}00585\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00586}00586\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00587}00587\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ redirects\ the\ visitor\ to\ the\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00588}00588\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ correctFaculty}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00589}00589\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ faculty.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00590}00590\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00591}00591\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00592}\mbox{\hyperlink{class_information_desk_a02ed5740aef013bbfd068727bb74616c}{00592}}\ \mbox{\hyperlink{class_information_desk_a02ed5740aef013bbfd068727bb74616c}{InformationDesk::InformationDesk}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00593}00593\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ n,}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00594}00594\ \ \ \ \ \textcolor{keywordtype}{int}\ cap)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00595}00595\ \ \ \ \ :\ name(n),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00596}00596\ \ \ \ \ \ \ capacity(cap),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00597}00597\ \ \ \ \ \ \ operational(true),}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00598}00598\ \ \ \ \ \ \ evacuationInstructions(false)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00599}00599\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00600}00600\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00601}00601\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00602}\mbox{\hyperlink{class_information_desk_a05045ad9063e074ecca50715c3dd833d}{00602}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_a05045ad9063e074ecca50715c3dd833d}{InformationDesk::open}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00603}00603\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00604}00604\ \ \ \ \ operational\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00605}00605\ \ \ \ \ evacuationInstructions\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00606}00606\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00607}00607\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00608}\mbox{\hyperlink{class_information_desk_ad9c600ce413f4be6963616daa7090fc4}{00608}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_ad9c600ce413f4be6963616daa7090fc4}{InformationDesk::close}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00609}00609\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00610}00610\ \ \ \ \ operational\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00611}00611\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00612}00612\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00613}\mbox{\hyperlink{class_information_desk_ad585e322e67accae404f3e5c2f84451c}{00613}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_ad585e322e67accae404f3e5c2f84451c}{InformationDesk::reportStatus}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00614}00614\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00615}00615\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00616}00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ [Information\ Desk]\ -\/\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00617}00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (operational\ ?\ \textcolor{stringliteral}{"{}operational"{}}\ :\ \textcolor{stringliteral}{"{}closed"{}});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00618}00618\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00619}00619\ \ \ \ \ \textcolor{keywordflow}{if}\ (evacuationInstructions)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00620}00620\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00621}00621\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ displaying\ evacuation\ instructions"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00622}00622\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00623}00623\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00624}00624\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ capacity\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00625}00625\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ capacity}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00626}00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00627}00627\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00628}00628\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00629}\mbox{\hyperlink{class_information_desk_a0c02ffc05696b3593bdb8d7ecddb6994}{00629}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_information_desk_a0c02ffc05696b3593bdb8d7ecddb6994}{InformationDesk::getCapacity}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00630}00630\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00631}00631\ \ \ \ \ \textcolor{keywordflow}{return}\ capacity;}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00632}00632\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00633}00633\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00634}\mbox{\hyperlink{class_information_desk_ac6aaa02339132bc177855ee10ce9636f}{00634}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_ac6aaa02339132bc177855ee10ce9636f}{InformationDesk::handleNotice}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00635}00635\ \ \ \ \ \mbox{\hyperlink{class_event_notice}{EventNotice}}*\ notice)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00636}00636\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00637}00637\ \ \ \ \ \textcolor{keywordflow}{if}\ (notice\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00638}00638\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00639}00639\ \ \ \ \ \ \ \ \ notice-\/>\mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{affect}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00640}00640\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00641}00641\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00642}00642\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00643}\mbox{\hyperlink{class_information_desk_ac1e8cabcc0da30a6b39cb74b1efed759}{00643}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_ac1e8cabcc0da30a6b39cb74b1efed759}{InformationDesk::onEmergencyAlert}}()}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00644}00644\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00645}00645\ \ \ \ \ operational\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00646}00646\ \ \ \ \ evacuationInstructions\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00647}00647\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00648}00648\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00649}00649\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ remains\ operational\ and\ displays\ evacuation\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00650}00650\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}instructions.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00651}00651\ \}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00652}00652\ }
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00653}\mbox{\hyperlink{class_information_desk_a94ef6eccf145770b6e3fb0f3e1553b19}{00653}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_information_desk_a94ef6eccf145770b6e3fb0f3e1553b19}{InformationDesk::onDepartmentMismatch}}(}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00654}00654\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ correctFaculty)}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00655}00655\ \{}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00656}00656\ \ \ \ \ std::cout\ <<\ name}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00657}00657\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ redirects\ the\ visitor\ to\ the\ "{}}}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00658}00658\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ correctFaculty}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00659}00659\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ faculty.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_leaves_8cpp_source_l00660}00660\ \}}
+
+\end{DoxyCode}

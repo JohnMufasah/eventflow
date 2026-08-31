@@ -1,0 +1,258 @@
+\doxysection{Shuttle\+Stop Class Reference}
+\hypertarget{class_shuttle_stop}{}\label{class_shuttle_stop}\index{ShuttleStop@{ShuttleStop}}
+
+
+Represents a shuttle stop.  
+
+
+
+
+{\ttfamily \#include $<$Leaves.\+h$>$}
+
+Inheritance diagram for Shuttle\+Stop\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_shuttle_stop}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shuttle_stop_a7e37018074d17443bd55c8fbf1c09722}{Shuttle\+Stop}} (const std\+::string \&name, int capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a shuttle stop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shuttle_stop_a5e2340d54c13dd5aac0090854fa1b901}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shuttle_stop_aa898299459a53d48e56f4f7afe99cd24}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shuttle_stop_a56c7e43539b266a8040f7f398cb35e86}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the current status of the component. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shuttle_stop_a7127217f318cc596254d14a702b8d2bc}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the capacity associated with the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shuttle_stop_aeb0f3e99b80c9ded1ea3876e139e3eb9}{handle\+Notice}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Handles a notification received by the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shuttle_stop_ae388a72cdd0a978619656f710ad506da}{on\+Shuttle\+Overload}} () override
+\begin{DoxyCompactList}\small\item\em Handles a shuttle overload notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shuttle_stop_aafb9b0bdd726671a2eb2380a8187fc55}{on\+Weather\+Alert}} () override
+\begin{DoxyCompactList}\small\item\em Handles a weather alert. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shuttle_stop_ab7597ab5dc80011ef7fc04e878f8ce30}{on\+Emergency\+Alert}} () override
+\begin{DoxyCompactList}\small\item\em Handles an emergency alert. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_leaf}{Event\+Leaf}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_event_leaf_a5eda5d24d904b4400afbafb9adea4b2e}{\texorpdfstring{$\sim$}{\string~}\+Event\+Leaf}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_event_component_a4f93a9cbdd78da5b800a39868fc4e09c}{on\+Capacity\+Update}} (int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Updates the component\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_aec4839494e41e077a0cea87a1d1c9c47}{on\+Venue\+Closure}} ()
+\begin{DoxyCompactList}\small\item\em Handles a venue closure notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a8649a7d0f5703e55b00f2acbef1dfa81}{on\+Room\+Change}} (const std\+::string \&new\+Room)
+\begin{DoxyCompactList}\small\item\em Handles a room change notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a72044b70a5e083f682335152500cda70}{on\+Safety\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_abdf4090503098b9451ac2fd1bfd5d8bd}{on\+Congestion}} ()
+\begin{DoxyCompactList}\small\item\em Handles an exhibition congestion notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_ac7af43a3cfad36b92bf77d4c7f957002}{on\+Capacity\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a capacity alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a7718f210ff03ddaf04618459e58ec143}{on\+Allergen\+Alert}} (const std\+::string \&dietary\+Tag)
+\begin{DoxyCompactList}\small\item\em Handles an allergen or dietary alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a89faa0da6eda79417910a81c1228da66}{on\+Department\+Mismatch}} (const std\+::string \&correct\+Faculty)
+\begin{DoxyCompactList}\small\item\em Handles a department mismatch notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a63967a66a104928431b085397137cd80}{on\+Safety\+Briefing\+Reminder}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety briefing reminder. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_event_component_a0b229e18d9611b8109c0a5527e6b01df}{\texorpdfstring{$\sim$}{\string~}\+Event\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a shuttle stop. 
+
+Definition at line \mbox{\hyperlink{_leaves_8h_source_l00262}{262}} of file \mbox{\hyperlink{_leaves_8h_source}{Leaves.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shuttle_stop_a7e37018074d17443bd55c8fbf1c09722}\label{class_shuttle_stop_a7e37018074d17443bd55c8fbf1c09722} 
+\index{ShuttleStop@{ShuttleStop}!ShuttleStop@{ShuttleStop}}
+\index{ShuttleStop@{ShuttleStop}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{ShuttleStop()}{ShuttleStop()}}
+{\footnotesize\ttfamily Shuttle\+Stop\+::\+Shuttle\+Stop (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Constructs a shuttle stop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the shuttle stop. \\
+\hline
+{\em capacity} & Shuttle stop capacity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00412}{412}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shuttle_stop_aa898299459a53d48e56f4f7afe99cd24}\label{class_shuttle_stop_aa898299459a53d48e56f4f7afe99cd24} 
+\index{ShuttleStop@{ShuttleStop}!close@{close}}
+\index{close@{close}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Shuttle\+Stop\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00428}{428}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_shuttle_stop_a7127217f318cc596254d14a702b8d2bc}\label{class_shuttle_stop_a7127217f318cc596254d14a702b8d2bc} 
+\index{ShuttleStop@{ShuttleStop}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Shuttle\+Stop\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the capacity associated with the component. 
+
+\begin{DoxyReturn}{Returns}
+Component capacity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00449}{449}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_shuttle_stop_aeb0f3e99b80c9ded1ea3876e139e3eb9}\label{class_shuttle_stop_aeb0f3e99b80c9ded1ea3876e139e3eb9} 
+\index{ShuttleStop@{ShuttleStop}!handleNotice@{handleNotice}}
+\index{handleNotice@{handleNotice}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{handleNotice()}{handleNotice()}}
+{\footnotesize\ttfamily void Shuttle\+Stop\+::handle\+Notice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a notification received by the component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification being received. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_component_a0af75223ef19c04e1316a182b400bdc4}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00454}{454}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_shuttle_stop_ab7597ab5dc80011ef7fc04e878f8ce30}\label{class_shuttle_stop_ab7597ab5dc80011ef7fc04e878f8ce30} 
+\index{ShuttleStop@{ShuttleStop}!onEmergencyAlert@{onEmergencyAlert}}
+\index{onEmergencyAlert@{onEmergencyAlert}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{onEmergencyAlert()}{onEmergencyAlert()}}
+{\footnotesize\ttfamily void Shuttle\+Stop\+::on\+Emergency\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles an emergency alert. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_ad02b6a3271d3612e51bb6bb4a0015049}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00481}{481}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_shuttle_stop_ae388a72cdd0a978619656f710ad506da}\label{class_shuttle_stop_ae388a72cdd0a978619656f710ad506da} 
+\index{ShuttleStop@{ShuttleStop}!onShuttleOverload@{onShuttleOverload}}
+\index{onShuttleOverload@{onShuttleOverload}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{onShuttleOverload()}{onShuttleOverload()}}
+{\footnotesize\ttfamily void Shuttle\+Stop\+::on\+Shuttle\+Overload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a shuttle overload notification. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_a2fabd68692363f9338fdf6f53a8d4e64}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00463}{463}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_shuttle_stop_aafb9b0bdd726671a2eb2380a8187fc55}\label{class_shuttle_stop_aafb9b0bdd726671a2eb2380a8187fc55} 
+\index{ShuttleStop@{ShuttleStop}!onWeatherAlert@{onWeatherAlert}}
+\index{onWeatherAlert@{onWeatherAlert}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{onWeatherAlert()}{onWeatherAlert()}}
+{\footnotesize\ttfamily void Shuttle\+Stop\+::on\+Weather\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a weather alert. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_a415af28892c73148fc8f424354811c8a}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00473}{473}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_shuttle_stop_a5e2340d54c13dd5aac0090854fa1b901}\label{class_shuttle_stop_a5e2340d54c13dd5aac0090854fa1b901} 
+\index{ShuttleStop@{ShuttleStop}!open@{open}}
+\index{open@{open}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Shuttle\+Stop\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00422}{422}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_shuttle_stop_a56c7e43539b266a8040f7f398cb35e86}\label{class_shuttle_stop_a56c7e43539b266a8040f7f398cb35e86} 
+\index{ShuttleStop@{ShuttleStop}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!ShuttleStop@{ShuttleStop}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Shuttle\+Stop\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the current status of the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00433}{433}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/composite/Leaves.\+h\item 
+src/composite/\mbox{\hyperlink{_leaves_8cpp}{Leaves.\+cpp}}\end{DoxyCompactItemize}

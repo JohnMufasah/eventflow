@@ -1,0 +1,35 @@
+\doxysection{Venue\+Closure\+Notice.\+cpp}
+\hypertarget{_venue_closure_notice_8cpp_source}{}\label{_venue_closure_notice_8cpp_source}\index{src/observer/VenueClosureNotice.cpp@{src/observer/VenueClosureNotice.cpp}}
+\mbox{\hyperlink{_venue_closure_notice_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}VenueClosureNotice.h"{}}}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}../composite/EventComponent.h"{}}}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00016}\mbox{\hyperlink{class_venue_closure_notice_afb7b8d575e01fac749ccc7735c52a2dd}{00016}}\ \mbox{\hyperlink{class_venue_closure_notice_afb7b8d575e01fac749ccc7735c52a2dd}{VenueClosureNotice::VenueClosureNotice}}(\textcolor{keyword}{const}\ std::string\&\ message,}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ location,}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ venue)}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00019}00019\ \ \ \ \ :\ \mbox{\hyperlink{class_event_notice}{EventNotice}}(message,\ location),}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00020}00020\ \ \ \ \ \ \ venue(venue)}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00029}\mbox{\hyperlink{class_venue_closure_notice_a3f0e264c453c86a8e40c39d39a4b48e0}{00029}}\ std::string\ \mbox{\hyperlink{class_venue_closure_notice_a3f0e264c453c86a8e40c39d39a4b48e0}{VenueClosureNotice::getVenue}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00030}00030\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ venue;}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00039}\mbox{\hyperlink{class_venue_closure_notice_a1eaf4f566104cf2799e9df7412ce0130}{00039}}\ std::string\ \mbox{\hyperlink{class_venue_closure_notice_a1eaf4f566104cf2799e9df7412ce0130}{VenueClosureNotice::getType}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00040}00040\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Venue\ Closure"{}};}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00052}\mbox{\hyperlink{class_venue_closure_notice_a30eebf1620d01cf40e648b94026fdb36}{00052}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_venue_closure_notice_a30eebf1620d01cf40e648b94026fdb36}{VenueClosureNotice::affect}}(\mbox{\hyperlink{class_event_component}{EventComponent}}*\ component)}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00053}00053\ \{}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (component\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00055}00055\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ component-\/>\mbox{\hyperlink{class_event_component_aec4839494e41e077a0cea87a1d1c9c47}{onVenueClosure}}();}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_venue_closure_notice_8cpp_source_l00058}00058\ \}}
+
+\end{DoxyCode}

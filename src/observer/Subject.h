@@ -1,8 +1,3 @@
-/**
- * @file Subject.h
- * @brief Defines the Subject interface for the EventFlow Observer pattern.
- */
-
 #ifndef SUBJECT_H
 #define SUBJECT_H
 
@@ -10,46 +5,37 @@ class Observer;
 class EventNotice;
 
 /**
- * @class Subject
- * @brief Interface for objects that manage and notify Observers.
+ * @brief Subject interface used by the EventFlow Observer pattern.
  *
- * A Subject maintains a collection of registered Observers.
- * Observers can attach to or detach from the Subject.
- *
- * When a change occurs, the Subject uses notify() to push an
- * EventNotice to all registered Observers.
+ * A Subject maintains a collection of Observers and notifies them
+ * when an EventNotice is generated.
  */
 class Subject
 {
 public:
-
     /**
-     * @brief Registers an Observer with the Subject.
+     * @brief Registers an observer.
      *
-     * @param observer Pointer to the Observer that should receive
-     *                 future notifications.
+     * @param observer Observer to attach.
      */
     virtual void attach(Observer* observer) = 0;
 
     /**
-     * @brief Removes an Observer from the Subject.
+     * @brief Removes an observer.
      *
-     * @param observer Pointer to the Observer that should no longer
-     *                 receive notifications.
+     * @param observer Observer to detach.
      */
     virtual void detach(Observer* observer) = 0;
 
     /**
-     * @brief Notifies all registered Observers.
+     * @brief Sends a notification to attached observers.
      *
-     * The EventNotice is pushed directly to each registered Observer.
-     *
-     * @param notice Pointer to the EventNotice being pushed.
+     * @param notice Notification to send.
      */
     virtual void notify(EventNotice* notice) = 0;
 
     /**
-     * @brief Virtual destructor for the Subject interface.
+     * @brief Virtual destructor.
      */
     virtual ~Subject() = default;
 };

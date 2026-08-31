@@ -1,0 +1,103 @@
+\doxysection{Subject Class Reference}
+\hypertarget{class_subject}{}\label{class_subject}\index{Subject@{Subject}}
+
+
+\doxylink{class_subject}{Subject} interface used by the Event\+Flow \doxylink{class_observer}{Observer} pattern.  
+
+
+
+
+{\ttfamily \#include $<$Subject.\+h$>$}
+
+Inheritance diagram for Subject\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_subject}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_subject_ab6d78de2ea944a23dc5a66a4fe580db2}{attach}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer)=0
+\begin{DoxyCompactList}\small\item\em Registers an observer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_a7e81018a886792735ab3d067feeb075d}{detach}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer)=0
+\begin{DoxyCompactList}\small\item\em Removes an observer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_subject_aeb9b41d7a80e5179d83f44169ffaea51}{notify}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice)=0
+\begin{DoxyCompactList}\small\item\em Sends a notification to attached observers. \end{DoxyCompactList}\item 
+\Hypertarget{class_subject_af9723476c61afcceeb91bee3211258c7}\label{class_subject_af9723476c61afcceeb91bee3211258c7} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_subject}{Subject} interface used by the Event\+Flow \doxylink{class_observer}{Observer} pattern. 
+
+A \doxylink{class_subject}{Subject} maintains a collection of Observers and notifies them when an \doxylink{class_event_notice}{Event\+Notice} is generated. 
+
+Definition at line \mbox{\hyperlink{_subject_8h_source_l00013}{13}} of file \mbox{\hyperlink{_subject_8h_source}{Subject.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_subject_ab6d78de2ea944a23dc5a66a4fe580db2}\label{class_subject_ab6d78de2ea944a23dc5a66a4fe580db2} 
+\index{Subject@{Subject}!attach@{attach}}
+\index{attach@{attach}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily virtual void Subject\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Registers an observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & \doxylink{class_observer}{Observer} to attach. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_event_zone_aea5c72855b07ab3683cd161f8fbd0f5b}{Event\+Zone}}, and \mbox{\hyperlink{class_event_control_a3b750b586a6c04f94a46f6a657c69e12}{Event\+Control}}.
+
+\Hypertarget{class_subject_a7e81018a886792735ab3d067feeb075d}\label{class_subject_a7e81018a886792735ab3d067feeb075d} 
+\index{Subject@{Subject}!detach@{detach}}
+\index{detach@{detach}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily virtual void Subject\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Removes an observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & \doxylink{class_observer}{Observer} to detach. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_event_zone_a037794e948dceda5c5c98c6c389abe96}{Event\+Zone}}, and \mbox{\hyperlink{class_event_control_a082ba83cbdc80ff220232967103db5b7}{Event\+Control}}.
+
+\Hypertarget{class_subject_aeb9b41d7a80e5179d83f44169ffaea51}\label{class_subject_aeb9b41d7a80e5179d83f44169ffaea51} 
+\index{Subject@{Subject}!notify@{notify}}
+\index{notify@{notify}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily virtual void Subject\+::notify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sends a notification to attached observers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_event_zone_a5ddbe110df8a0bf74e5d94e6b40a9da3}{Event\+Zone}}, and \mbox{\hyperlink{class_event_control_a3f1de9c787f6071867832964938907f2}{Event\+Control}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Subject.\+h\end{DoxyCompactItemize}

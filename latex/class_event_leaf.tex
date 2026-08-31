@@ -1,0 +1,92 @@
+\doxysection{Event\+Leaf Class Reference}
+\hypertarget{class_event_leaf}{}\label{class_event_leaf}\index{EventLeaf@{EventLeaf}}
+
+
+Base class representing a Leaf in the Composite pattern.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Leaf.\+h$>$}
+
+Inheritance diagram for Event\+Leaf\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{class_event_leaf}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_event_leaf_a5eda5d24d904b4400afbafb9adea4b2e}{\texorpdfstring{$\sim$}{\string~}\+Event\+Leaf}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{open}} ()=0
+\begin{DoxyCompactList}\small\item\em Opens the component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{close}} ()=0
+\begin{DoxyCompactList}\small\item\em Closes the component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{report\+Status}} () const =0
+\begin{DoxyCompactList}\small\item\em Displays the current status of the component. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{get\+Capacity}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the capacity associated with the component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a0af75223ef19c04e1316a182b400bdc4}{handle\+Notice}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice)=0
+\begin{DoxyCompactList}\small\item\em Handles a notification received by the component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a4f93a9cbdd78da5b800a39868fc4e09c}{on\+Capacity\+Update}} (int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Updates the component\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_aec4839494e41e077a0cea87a1d1c9c47}{on\+Venue\+Closure}} ()
+\begin{DoxyCompactList}\small\item\em Handles a venue closure notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a8649a7d0f5703e55b00f2acbef1dfa81}{on\+Room\+Change}} (const std\+::string \&new\+Room)
+\begin{DoxyCompactList}\small\item\em Handles a room change notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a72044b70a5e083f682335152500cda70}{on\+Safety\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a415af28892c73148fc8f424354811c8a}{on\+Weather\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a weather alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_abdf4090503098b9451ac2fd1bfd5d8bd}{on\+Congestion}} ()
+\begin{DoxyCompactList}\small\item\em Handles an exhibition congestion notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a2fabd68692363f9338fdf6f53a8d4e64}{on\+Shuttle\+Overload}} ()
+\begin{DoxyCompactList}\small\item\em Handles a shuttle overload notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_ad02b6a3271d3612e51bb6bb4a0015049}{on\+Emergency\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles an emergency alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_ac7af43a3cfad36b92bf77d4c7f957002}{on\+Capacity\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a capacity alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a7718f210ff03ddaf04618459e58ec143}{on\+Allergen\+Alert}} (const std\+::string \&dietary\+Tag)
+\begin{DoxyCompactList}\small\item\em Handles an allergen or dietary alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a89faa0da6eda79417910a81c1228da66}{on\+Department\+Mismatch}} (const std\+::string \&correct\+Faculty)
+\begin{DoxyCompactList}\small\item\em Handles a department mismatch notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a63967a66a104928431b085397137cd80}{on\+Safety\+Briefing\+Reminder}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety briefing reminder. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_event_component_a0b229e18d9611b8109c0a5527e6b01df}{\texorpdfstring{$\sim$}{\string~}\+Event\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing a Leaf in the Composite pattern. 
+
+\doxylink{class_event_leaf}{Event\+Leaf} objects represent components that cannot contain child Event\+Components. Concrete event objects such as \doxylink{class_student_guide}{Student\+Guide}, \doxylink{class_food_vendor}{Food\+Vendor} and \doxylink{class_information_desk}{Information\+Desk} derive from this class. 
+
+Definition at line \mbox{\hyperlink{_event_leaf_8h_source_l00019}{19}} of file \mbox{\hyperlink{_event_leaf_8h_source}{Event\+Leaf.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_leaf_a5eda5d24d904b4400afbafb9adea4b2e}\label{class_event_leaf_a5eda5d24d904b4400afbafb9adea4b2e} 
+\index{EventLeaf@{EventLeaf}!````~EventLeaf@{\texorpdfstring{$\sim$}{\string~}EventLeaf}}
+\index{````~EventLeaf@{\texorpdfstring{$\sim$}{\string~}EventLeaf}!EventLeaf@{EventLeaf}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EventLeaf()}{\string~EventLeaf()}}
+{\footnotesize\ttfamily virtual Event\+Leaf\+::\texorpdfstring{$\sim$}{\string~}\+Event\+Leaf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{_event_leaf_8h_source_l00025}{25}} of file \mbox{\hyperlink{_event_leaf_8h_source}{Event\+Leaf.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/composite/\mbox{\hyperlink{_event_leaf_8h}{Event\+Leaf.\+h}}\end{DoxyCompactItemize}

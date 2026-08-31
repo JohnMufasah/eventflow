@@ -1,0 +1,61 @@
+\doxysection{Observer Class Reference}
+\hypertarget{class_observer}{}\label{class_observer}\index{Observer@{Observer}}
+
+
+\doxylink{class_observer}{Observer} interface for the Event\+Flow notification system.  
+
+
+
+
+{\ttfamily \#include $<$Observer.\+h$>$}
+
+Inheritance diagram for Observer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_observer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_observer_a13e53cfcd28c6d8e0e387a71d8d0f67f}{update}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice)=0
+\begin{DoxyCompactList}\small\item\em Receives a notification. \end{DoxyCompactList}\item 
+\Hypertarget{class_observer_a37824643eeaef086de17bba2717d865a}\label{class_observer_a37824643eeaef086de17bba2717d865a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_observer}{Observer} interface for the Event\+Flow notification system. 
+
+Event\+Flow uses the Push \doxylink{class_observer}{Observer} approach, where the \doxylink{class_event_notice}{Event\+Notice} is passed directly to the observer. 
+
+Definition at line \mbox{\hyperlink{_observer_8h_source_l00012}{12}} of file \mbox{\hyperlink{_observer_8h_source}{Observer.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_observer_a13e53cfcd28c6d8e0e387a71d8d0f67f}\label{class_observer_a13e53cfcd28c6d8e0e387a71d8d0f67f} 
+\index{Observer@{Observer}!update@{update}}
+\index{update@{update}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Observer\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Receives a notification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification being received. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_event_notification_handler_a901956c5c0d6269df72dd22b7480ff65}{Event\+Notification\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Observer.\+h\end{DoxyCompactItemize}

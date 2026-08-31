@@ -1,47 +1,45 @@
-/**
- * @file CapacityAlert.h
- * @brief Defines capacity alert notifications for the EventFlow system.
- */
-
 #ifndef CAPACITYALERT_H
 #define CAPACITYALERT_H
 
 #include "EventNotice.h"
 
 /**
- * @class CapacityAlert
- * @brief Represents a notification that an event zone has reached capacity.
- *
- * A CapacityAlert is pushed through the Observer system when a zone
- * reaches its capacity limit. The receiving EventComponent determines
- * how it reacts to the alert.
+ * @brief Notice generated when an event zone reaches capacity.
  */
 class CapacityAlert : public EventNotice
 {
+private:
+    bool laboratoryZone;
+
 public:
-
     /**
-     * @brief Constructs a capacity alert.
+     * @brief Creates a capacity alert.
      *
-     * @param message Description of the capacity condition.
-     * @param location Location of the affected zone.
+     * @param message Description of the capacity issue.
+     * @param location Zone that reached capacity.
+     * @param laboratoryZone Whether the affected zone is a laboratory.
      */
-    CapacityAlert(const std::string& message,
-                  const std::string& location);
+    CapacityAlert(
+        const std::string& message,
+        const std::string& location,
+        bool laboratoryZone = false);
 
     /**
-     * @brief Returns the notification type.
-     *
-     * @return "Capacity Alert".
+     * @brief Returns the notice type.
      */
     std::string getType() const override;
 
     /**
-     * @brief Applies the capacity alert to an EventComponent.
+     * @brief Applies the capacity response to a component.
      *
      * @param component Component receiving the alert.
      */
     void affect(EventComponent* component) override;
+
+    /**
+     * @brief Indicates whether the alert came from a laboratory zone.
+     */
+    bool isLaboratoryZone() const;
 };
 
 #endif

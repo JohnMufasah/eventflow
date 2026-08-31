@@ -1,0 +1,126 @@
+\doxysection{Emergency\+Alert Class Reference}
+\hypertarget{class_emergency_alert}{}\label{class_emergency_alert}\index{EmergencyAlert@{EmergencyAlert}}
+
+
+Notice used to report an emergency situation.  
+
+
+
+
+{\ttfamily \#include $<$Emergency\+Alert.\+h$>$}
+
+Inheritance diagram for Emergency\+Alert\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_emergency_alert}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_emergency_alert_a944627d437b010583b2a0321093316bc}{Emergency\+Alert}} (const std\+::string \&message, const std\+::string \&location)
+\begin{DoxyCompactList}\small\item\em Creates an emergency alert. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_emergency_alert_aeed4a4bfac00a91766e78245a6db5283}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the notice type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_emergency_alert_a266a6474511db59aeebaf414d6b806c9}{affect}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component) override
+\begin{DoxyCompactList}\small\item\em Applies the emergency response to a component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f}{Event\+Notice}} (const std\+::string \&message, const std\+::string \&location)
+\begin{DoxyCompactList}\small\item\em Creates an event notice. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the notice message. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Returns the location associated with the notice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3}{message}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a77095d9452e8978ffeb307523ffd44c7}{location}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notice used to report an emergency situation. 
+
+Definition at line \mbox{\hyperlink{_emergency_alert_8h_source_l00009}{9}} of file \mbox{\hyperlink{_emergency_alert_8h_source}{Emergency\+Alert.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_emergency_alert_a944627d437b010583b2a0321093316bc}\label{class_emergency_alert_a944627d437b010583b2a0321093316bc} 
+\index{EmergencyAlert@{EmergencyAlert}!EmergencyAlert@{EmergencyAlert}}
+\index{EmergencyAlert@{EmergencyAlert}!EmergencyAlert@{EmergencyAlert}}
+\doxysubsubsection{\texorpdfstring{EmergencyAlert()}{EmergencyAlert()}}
+{\footnotesize\ttfamily Emergency\+Alert\+::\+Emergency\+Alert (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{location }\end{DoxyParamCaption})}
+
+
+
+Creates an emergency alert. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Description of the emergency. \\
+\hline
+{\em location} & Location affected by the emergency. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_emergency_alert_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_emergency_alert_8cpp_source}{Emergency\+Alert.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_emergency_alert_a266a6474511db59aeebaf414d6b806c9}\label{class_emergency_alert_a266a6474511db59aeebaf414d6b806c9} 
+\index{EmergencyAlert@{EmergencyAlert}!affect@{affect}}
+\index{affect@{affect}!EmergencyAlert@{EmergencyAlert}}
+\doxysubsubsection{\texorpdfstring{affect()}{affect()}}
+{\footnotesize\ttfamily void Emergency\+Alert\+::affect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the emergency response to a component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the alert. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_emergency_alert_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_emergency_alert_8cpp_source}{Emergency\+Alert.\+cpp}}.
+
+\Hypertarget{class_emergency_alert_aeed4a4bfac00a91766e78245a6db5283}\label{class_emergency_alert_aeed4a4bfac00a91766e78245a6db5283} 
+\index{EmergencyAlert@{EmergencyAlert}!getType@{getType}}
+\index{getType@{getType}!EmergencyAlert@{EmergencyAlert}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Emergency\+Alert\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the notice type. 
+
+
+
+Implements \mbox{\hyperlink{class_event_notice_adf73e474907ceddc5707c759391db35f}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_emergency_alert_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_emergency_alert_8cpp_source}{Emergency\+Alert.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Emergency\+Alert.\+h\item 
+src/observer/Emergency\+Alert.\+cpp\end{DoxyCompactItemize}

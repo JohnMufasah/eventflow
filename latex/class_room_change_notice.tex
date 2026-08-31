@@ -1,0 +1,144 @@
+\doxysection{Room\+Change\+Notice Class Reference}
+\hypertarget{class_room_change_notice}{}\label{class_room_change_notice}\index{RoomChangeNotice@{RoomChangeNotice}}
+
+
+Notice indicating that an event has moved to another room.  
+
+
+
+
+{\ttfamily \#include $<$Room\+Change\+Notice.\+h$>$}
+
+Inheritance diagram for Room\+Change\+Notice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_room_change_notice}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room_change_notice_a7e0ca195418ebbe965535d13332ab1e8}{Room\+Change\+Notice}} (const std\+::string \&message, const std\+::string \&location, const std\+::string \&new\+Room)
+\begin{DoxyCompactList}\small\item\em Creates a room change notice. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_room_change_notice_a84d5c178191684e84c1f8391f19a046d}{get\+New\+Room}} () const
+\begin{DoxyCompactList}\small\item\em Returns the new room. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_room_change_notice_a90792c66832a06a6e951f2fb69862b2f}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the notice type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_change_notice_a376c3a781796e646a96f33d3af879155}{affect}} (\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}component) override
+\begin{DoxyCompactList}\small\item\em Applies the room change to a component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_notice_afcb8d7efaa2d899f92251f669fc7b45f}{Event\+Notice}} (const std\+::string \&message, const std\+::string \&location)
+\begin{DoxyCompactList}\small\item\em Creates an event notice. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Notice} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_aac5cce22d078aca351cbdc2b7394f1f2}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the notice message. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a810a545dd8f5cd4c1875cd01172f9f79}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em Returns the location associated with the notice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event_notice}{Event\+Notice}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a1e4a8052e8feb7bc682f659b71ef44b3}{message}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_notice_a77095d9452e8978ffeb307523ffd44c7}{location}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notice indicating that an event has moved to another room. 
+
+Definition at line \mbox{\hyperlink{_room_change_notice_8h_source_l00009}{9}} of file \mbox{\hyperlink{_room_change_notice_8h_source}{Room\+Change\+Notice.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_room_change_notice_a7e0ca195418ebbe965535d13332ab1e8}\label{class_room_change_notice_a7e0ca195418ebbe965535d13332ab1e8} 
+\index{RoomChangeNotice@{RoomChangeNotice}!RoomChangeNotice@{RoomChangeNotice}}
+\index{RoomChangeNotice@{RoomChangeNotice}!RoomChangeNotice@{RoomChangeNotice}}
+\doxysubsubsection{\texorpdfstring{RoomChangeNotice()}{RoomChangeNotice()}}
+{\footnotesize\ttfamily Room\+Change\+Notice\+::\+Room\+Change\+Notice (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{location,  }\item[{const std\+::string \&}]{new\+Room }\end{DoxyParamCaption})}
+
+
+
+Creates a room change notice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Description of the room change. \\
+\hline
+{\em location} & Current location of the event. \\
+\hline
+{\em new\+Room} & New room for the event. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_room_change_notice_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_room_change_notice_8cpp_source}{Room\+Change\+Notice.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_room_change_notice_a376c3a781796e646a96f33d3af879155}\label{class_room_change_notice_a376c3a781796e646a96f33d3af879155} 
+\index{RoomChangeNotice@{RoomChangeNotice}!affect@{affect}}
+\index{affect@{affect}!RoomChangeNotice@{RoomChangeNotice}}
+\doxysubsubsection{\texorpdfstring{affect()}{affect()}}
+{\footnotesize\ttfamily void Room\+Change\+Notice\+::affect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the room change to a component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Component receiving the notice. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_notice_a440494ad677db03c18981794afe54886}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_room_change_notice_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_room_change_notice_8cpp_source}{Room\+Change\+Notice.\+cpp}}.
+
+\Hypertarget{class_room_change_notice_a84d5c178191684e84c1f8391f19a046d}\label{class_room_change_notice_a84d5c178191684e84c1f8391f19a046d} 
+\index{RoomChangeNotice@{RoomChangeNotice}!getNewRoom@{getNewRoom}}
+\index{getNewRoom@{getNewRoom}!RoomChangeNotice@{RoomChangeNotice}}
+\doxysubsubsection{\texorpdfstring{getNewRoom()}{getNewRoom()}}
+{\footnotesize\ttfamily std\+::string Room\+Change\+Notice\+::get\+New\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the new room. 
+
+
+
+Definition at line \mbox{\hyperlink{_room_change_notice_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_room_change_notice_8cpp_source}{Room\+Change\+Notice.\+cpp}}.
+
+\Hypertarget{class_room_change_notice_a90792c66832a06a6e951f2fb69862b2f}\label{class_room_change_notice_a90792c66832a06a6e951f2fb69862b2f} 
+\index{RoomChangeNotice@{RoomChangeNotice}!getType@{getType}}
+\index{getType@{getType}!RoomChangeNotice@{RoomChangeNotice}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Room\+Change\+Notice\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the notice type. 
+
+
+
+Implements \mbox{\hyperlink{class_event_notice_adf73e474907ceddc5707c759391db35f}{Event\+Notice}}.
+
+
+
+Definition at line \mbox{\hyperlink{_room_change_notice_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{_room_change_notice_8cpp_source}{Room\+Change\+Notice.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/observer/Room\+Change\+Notice.\+h\item 
+src/observer/Room\+Change\+Notice.\+cpp\end{DoxyCompactItemize}

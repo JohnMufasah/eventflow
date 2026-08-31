@@ -1,0 +1,304 @@
+\doxysection{Student\+Guide Class Reference}
+\hypertarget{class_student_guide}{}\label{class_student_guide}\index{StudentGuide@{StudentGuide}}
+
+
+Represents a student guide responsible for a visitor group.  
+
+
+
+
+{\ttfamily \#include $<$Leaves.\+h$>$}
+
+Inheritance diagram for Student\+Guide\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_student_guide}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_student_guide_a3242f15301b71793c506812bac197fe8}{Student\+Guide}} (const std\+::string \&name, int group\+Size)
+\begin{DoxyCompactList}\small\item\em Constructs a student guide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_a7c4278df81094d9d2175f951e2b371bc}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_a00168df3b63227e2dc17104d0c6ce9cd}{close}} () override
+\begin{DoxyCompactList}\small\item\em Closes the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_a16f909ada5206d880569e5e3326d07e7}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Displays the current status of the component. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_student_guide_a1a440c5d92a0f12c9cd79d69ba4d4c1d}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the capacity associated with the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_a704ee84c703333ae2fe5a55f2c5dce16}{handle\+Notice}} (\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}notice) override
+\begin{DoxyCompactList}\small\item\em Handles a notification received by the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_adfe6d79b34d7c795e6298b6eacdd16aa}{on\+Safety\+Alert}} () override
+\begin{DoxyCompactList}\small\item\em Handles a safety alert. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_aed2fa3162772d44de18512d818d9939a}{on\+Congestion}} () override
+\begin{DoxyCompactList}\small\item\em Handles an exhibition congestion notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_abb8783f8e414e93447f53996e58ccb93}{on\+Emergency\+Alert}} () override
+\begin{DoxyCompactList}\small\item\em Handles an emergency alert. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_ad1341c4f297875baf9a5ce9c84de25b6}{on\+Room\+Change}} (const std\+::string \&new\+Room) override
+\begin{DoxyCompactList}\small\item\em Redirects visitors to a new presentation room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_guide_a3079026c24136a49ebb25360065d392c}{on\+Department\+Mismatch}} (const std\+::string \&correct\+Faculty) override
+\begin{DoxyCompactList}\small\item\em Redirects a visitor to the correct faculty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_leaf}{Event\+Leaf}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_event_leaf_a5eda5d24d904b4400afbafb9adea4b2e}{\texorpdfstring{$\sim$}{\string~}\+Event\+Leaf}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_event_component_a4f93a9cbdd78da5b800a39868fc4e09c}{on\+Capacity\+Update}} (int new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Updates the component\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_aec4839494e41e077a0cea87a1d1c9c47}{on\+Venue\+Closure}} ()
+\begin{DoxyCompactList}\small\item\em Handles a venue closure notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a415af28892c73148fc8f424354811c8a}{on\+Weather\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a weather alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a2fabd68692363f9338fdf6f53a8d4e64}{on\+Shuttle\+Overload}} ()
+\begin{DoxyCompactList}\small\item\em Handles a shuttle overload notification. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_ac7af43a3cfad36b92bf77d4c7f957002}{on\+Capacity\+Alert}} ()
+\begin{DoxyCompactList}\small\item\em Handles a capacity alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a7718f210ff03ddaf04618459e58ec143}{on\+Allergen\+Alert}} (const std\+::string \&dietary\+Tag)
+\begin{DoxyCompactList}\small\item\em Handles an allergen or dietary alert. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_event_component_a63967a66a104928431b085397137cd80}{on\+Safety\+Briefing\+Reminder}} ()
+\begin{DoxyCompactList}\small\item\em Handles a safety briefing reminder. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_event_component_a0b229e18d9611b8109c0a5527e6b01df}{\texorpdfstring{$\sim$}{\string~}\+Event\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a student guide responsible for a visitor group. 
+
+Definition at line \mbox{\hyperlink{_leaves_8h_source_l00296}{296}} of file \mbox{\hyperlink{_leaves_8h_source}{Leaves.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_student_guide_a3242f15301b71793c506812bac197fe8}\label{class_student_guide_a3242f15301b71793c506812bac197fe8} 
+\index{StudentGuide@{StudentGuide}!StudentGuide@{StudentGuide}}
+\index{StudentGuide@{StudentGuide}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{StudentGuide()}{StudentGuide()}}
+{\footnotesize\ttfamily Student\+Guide\+::\+Student\+Guide (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{group\+Size }\end{DoxyParamCaption})}
+
+
+
+Constructs a student guide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the guide. \\
+\hline
+{\em group\+Size} & Number of visitors in the group. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00490}{490}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_student_guide_a00168df3b63227e2dc17104d0c6ce9cd}\label{class_student_guide_a00168df3b63227e2dc17104d0c6ce9cd} 
+\index{StudentGuide@{StudentGuide}!close@{close}}
+\index{close@{close}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Student\+Guide\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Closes the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00506}{506}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_a1a440c5d92a0f12c9cd79d69ba4d4c1d}\label{class_student_guide_a1a440c5d92a0f12c9cd79d69ba4d4c1d} 
+\index{StudentGuide@{StudentGuide}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Student\+Guide\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the capacity associated with the component. 
+
+\begin{DoxyReturn}{Returns}
+Component capacity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00530}{530}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_a704ee84c703333ae2fe5a55f2c5dce16}\label{class_student_guide_a704ee84c703333ae2fe5a55f2c5dce16} 
+\index{StudentGuide@{StudentGuide}!handleNotice@{handleNotice}}
+\index{handleNotice@{handleNotice}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{handleNotice()}{handleNotice()}}
+{\footnotesize\ttfamily void Student\+Guide\+::handle\+Notice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_notice}{Event\+Notice}} \texorpdfstring{$\ast$}{*}}]{notice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a notification received by the component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & Notification being received. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_event_component_a0af75223ef19c04e1316a182b400bdc4}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00535}{535}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_aed2fa3162772d44de18512d818d9939a}\label{class_student_guide_aed2fa3162772d44de18512d818d9939a} 
+\index{StudentGuide@{StudentGuide}!onCongestion@{onCongestion}}
+\index{onCongestion@{onCongestion}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{onCongestion()}{onCongestion()}}
+{\footnotesize\ttfamily void Student\+Guide\+::on\+Congestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles an exhibition congestion notification. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_abdf4090503098b9451ac2fd1bfd5d8bd}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00552}{552}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_a3079026c24136a49ebb25360065d392c}\label{class_student_guide_a3079026c24136a49ebb25360065d392c} 
+\index{StudentGuide@{StudentGuide}!onDepartmentMismatch@{onDepartmentMismatch}}
+\index{onDepartmentMismatch@{onDepartmentMismatch}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{onDepartmentMismatch()}{onDepartmentMismatch()}}
+{\footnotesize\ttfamily void Student\+Guide\+::on\+Department\+Mismatch (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{correct\+Faculty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Redirects a visitor to the correct faculty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em correct\+Faculty} & Correct faculty. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_a89faa0da6eda79417910a81c1228da66}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00581}{581}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_abb8783f8e414e93447f53996e58ccb93}\label{class_student_guide_abb8783f8e414e93447f53996e58ccb93} 
+\index{StudentGuide@{StudentGuide}!onEmergencyAlert@{onEmergencyAlert}}
+\index{onEmergencyAlert@{onEmergencyAlert}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{onEmergencyAlert()}{onEmergencyAlert()}}
+{\footnotesize\ttfamily void Student\+Guide\+::on\+Emergency\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles an emergency alert. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_ad02b6a3271d3612e51bb6bb4a0015049}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00560}{560}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_ad1341c4f297875baf9a5ce9c84de25b6}\label{class_student_guide_ad1341c4f297875baf9a5ce9c84de25b6} 
+\index{StudentGuide@{StudentGuide}!onRoomChange@{onRoomChange}}
+\index{onRoomChange@{onRoomChange}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{onRoomChange()}{onRoomChange()}}
+{\footnotesize\ttfamily void Student\+Guide\+::on\+Room\+Change (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Redirects visitors to a new presentation room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Room} & New presentation room. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_a8649a7d0f5703e55b00f2acbef1dfa81}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00570}{570}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_adfe6d79b34d7c795e6298b6eacdd16aa}\label{class_student_guide_adfe6d79b34d7c795e6298b6eacdd16aa} 
+\index{StudentGuide@{StudentGuide}!onSafetyAlert@{onSafetyAlert}}
+\index{onSafetyAlert@{onSafetyAlert}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{onSafetyAlert()}{onSafetyAlert()}}
+{\footnotesize\ttfamily void Student\+Guide\+::on\+Safety\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a safety alert. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event_component_a72044b70a5e083f682335152500cda70}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00544}{544}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_a7c4278df81094d9d2175f951e2b371bc}\label{class_student_guide_a7c4278df81094d9d2175f951e2b371bc} 
+\index{StudentGuide@{StudentGuide}!open@{open}}
+\index{open@{open}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Student\+Guide\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00500}{500}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+\Hypertarget{class_student_guide_a16f909ada5206d880569e5e3326d07e7}\label{class_student_guide_a16f909ada5206d880569e5e3326d07e7} 
+\index{StudentGuide@{StudentGuide}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!StudentGuide@{StudentGuide}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily void Student\+Guide\+::report\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the current status of the component. 
+
+
+
+Implements \mbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{_leaves_8cpp_source_l00512}{512}} of file \mbox{\hyperlink{_leaves_8cpp_source}{Leaves.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/composite/Leaves.\+h\item 
+src/composite/\mbox{\hyperlink{_leaves_8cpp}{Leaves.\+cpp}}\end{DoxyCompactItemize}

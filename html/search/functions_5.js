@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['getcapacity_0',['getCapacity',['../class_event_component.html#a6128b4c0f20d353a29d45348f48a5f2e',1,'EventComponent::getCapacity()'],['../class_event_group.html#affe035069afc221547fe9e848017ee3c',1,'EventGroup::getCapacity()'],['../class_event_zone.html#a1d0210c84935bd2bccb0d75967e822a6',1,'EventZone::getCapacity()'],['../class_safety_briefing.html#af1bfea67a67ede7f659b47a324de3ef4',1,'SafetyBriefing::getCapacity()'],['../class_laboratory_demonstration.html#a8201c159b75456c5944697cbe62487f8',1,'LaboratoryDemonstration::getCapacity()'],['../class_food_vendor.html#aff5a5fc134b9e2b9b1c743cf76c7df5e',1,'FoodVendor::getCapacity()'],['../class_course_presentation.html#a7b218bc6e20b685d0b61aea5110e3276',1,'CoursePresentation::getCapacity()'],['../class_transport_coordinator.html#a926bb97a69f825b6b0be4f5f3424f870',1,'TransportCoordinator::getCapacity()'],['../class_registration_desk.html#a7359d48378096c47d0c78210e35f7103',1,'RegistrationDesk::getCapacity()'],['../class_shuttle_stop.html#a7127217f318cc596254d14a702b8d2bc',1,'ShuttleStop::getCapacity()'],['../class_student_guide.html#a1a440c5d92a0f12c9cd79d69ba4d4c1d',1,'StudentGuide::getCapacity()'],['../class_information_desk.html#a0c02ffc05696b3593bdb8d7ecddb6994',1,'InformationDesk::getCapacity()']]],
+  ['getcapacitylimit_1',['getCapacityLimit',['../class_event_zone.html#a4341a33f799d9fbac291c4a266a3a00f',1,'EventZone']]],
+  ['getchildren_2',['getChildren',['../class_event_group.html#a91487acc6fbfbb8966626047b288e450',1,'EventGroup']]],
+  ['getcorrectfaculty_3',['getCorrectFaculty',['../class_department_mismatch.html#a443091e7b3ea82a6b979d1c47a29198e',1,'DepartmentMismatch']]],
+  ['getdietarytag_4',['getDietaryTag',['../class_allergen_alert.html#a4f440accb80bbe1394f0bda36ab3e408',1,'AllergenAlert']]],
+  ['getfaculty_5',['getFaculty',['../class_visitor.html#a4b7eec3d117f973e8d3c0f67024ea408',1,'Visitor']]],
+  ['getlocation_6',['getLocation',['../class_event_notice.html#a810a545dd8f5cd4c1875cd01172f9f79',1,'EventNotice']]],
+  ['getmessage_7',['getMessage',['../class_event_notice.html#aac5cce22d078aca351cbdc2b7394f1f2',1,'EventNotice']]],
+  ['getname_8',['getName',['../class_visitor.html#a3c0c93b2099bc5ac077b7b0cb1df99c6',1,'Visitor']]],
+  ['getnewcapacity_9',['getNewCapacity',['../class_capacity_update_notice.html#a60453fd11b24fe9878ed6f1b076c5d05',1,'CapacityUpdateNotice']]],
+  ['getnewroom_10',['getNewRoom',['../class_room_change_notice.html#a84d5c178191684e84c1f8391f19a046d',1,'RoomChangeNotice']]],
+  ['getoldcapacity_11',['getOldCapacity',['../class_capacity_update_notice.html#ab34fbed77b03a95052fd82e227e2f7bc',1,'CapacityUpdateNotice']]],
+  ['gettarget_12',['getTarget',['../class_event_notification_handler.html#a703924c1dbfc7cd3f993d2846f751b30',1,'EventNotificationHandler']]],
+  ['gettype_13',['getType',['../class_allergen_alert.html#aa273b8db3be825679bee620671413968',1,'AllergenAlert::getType()'],['../class_capacity_alert.html#aa8e152bd2288d83a2282e40218c0a096',1,'CapacityAlert::getType()'],['../class_capacity_update_notice.html#a3a7971cc3323a7ebb47ab3405f6a3113',1,'CapacityUpdateNotice::getType()'],['../class_department_mismatch.html#a08ed0a26b814cba6a5e66b9a75129a70',1,'DepartmentMismatch::getType()'],['../class_emergency_alert.html#aeed4a4bfac00a91766e78245a6db5283',1,'EmergencyAlert::getType()'],['../class_event_notice.html#adf73e474907ceddc5707c759391db35f',1,'EventNotice::getType()'],['../class_room_change_notice.html#a90792c66832a06a6e951f2fb69862b2f',1,'RoomChangeNotice::getType()'],['../class_venue_closure_notice.html#a1eaf4f566104cf2799e9df7412ce0130',1,'VenueClosureNotice::getType() const override']]],
+  ['getvenue_14',['getVenue',['../class_venue_closure_notice.html#a3f0e264c453c86a8e40c39d39a4b48e0',1,'VenueClosureNotice']]],
+  ['getvisitorcount_15',['getVisitorCount',['../class_event_zone.html#a41eba2b71e9dda6c9b028c6b346ea4d6',1,'EventZone']]]
+];
