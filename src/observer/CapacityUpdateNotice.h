@@ -57,6 +57,13 @@ public:
      * @return "Capacity Update".
      */
     std::string getType() const override;
+
+    /**
+ * @brief Applies the capacity update notification to an EventComponent.
+ *
+ * @param component Component receiving the notification.
+ */
+void affect(EventComponent* component) override;
 };
 
 #endif

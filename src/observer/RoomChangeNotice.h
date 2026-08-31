@@ -57,6 +57,13 @@ public:
      * @return "Room Change".
      */
     std::string getType() const override;
+
+    /**
+ * @brief Applies the room change notification to an EventComponent.
+ *
+ * @param component Component receiving the notification.
+ */
+void affect(EventComponent* component) override;
 };
 
 #endif

@@ -48,6 +48,13 @@ public:
      * @return "Venue Closure".
      */
     std::string getType() const override;
+
+    /**
+ * @brief Applies the venue closure notification to an EventComponent.
+ *
+ * @param component Component receiving the notification.
+ */
+void affect(EventComponent* component) override;
 };
 
 #endif
