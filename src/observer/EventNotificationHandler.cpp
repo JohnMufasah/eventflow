@@ -10,8 +10,18 @@ EventNotificationHandler::EventNotificationHandler(EventComponent* target)
 
 void EventNotificationHandler::update(EventNotice* notice)
 {
+    if (notice == nullptr)
+    {
+        return;
+    }
+
     if (target != nullptr)
     {
         target->handleNotice(notice);
     }
+}
+
+EventComponent* EventNotificationHandler::getTarget() const
+{
+    return target;
 }

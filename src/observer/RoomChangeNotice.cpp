@@ -19,3 +19,8 @@ std::string RoomChangeNotice::getNewRoom() const
 {
     return newRoom;
 }
+
+std::string RoomChangeNotice::getType() const
+{
+    return "Room Change";
+}
